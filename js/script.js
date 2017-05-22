@@ -191,7 +191,7 @@ $(".imagen-juego").click(function () {
 function abrirFicha(elemento, i) {
     clicked = true;
 
-    $("#ficha").fadeIn("fast", "linear");
+    $("#ficha").fadeIn("fast");
     $(".caja").css({ "animation-play-state": "paused" });
     $("body").css({ "background-image": 'url(' + rutasImagenes[i][2] + ')' });
 
@@ -214,7 +214,7 @@ function abrirFicha(elemento, i) {
 function cerrarFicha(elemento, i) {
     clicked = false;
 
-    $("#ficha").fadeOut("fast", "linear");
+    $("#ficha").slideUp("fast", "linear");
     $(".caja").css({ "animation-play-state": "running" });
     $("body").css({ "background-image": 'url("img/fondo.jpg")' });
 
