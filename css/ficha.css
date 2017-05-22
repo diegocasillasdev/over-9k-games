@@ -1,0 +1,167 @@
+/**********
+ * FICHA  *
+ **********/
+
+
+.ficha {
+  display: none;
+  
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  
+  width: 60%;
+  height: 100%;
+
+  margin: 0 auto;
+  border: 3px solid whitesmoke;
+  border-radius: 5px;
+  
+  background-image: url("../img/fondo.jpg");
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.55);
+}
+
+.fondo-ficha {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 1% 2%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/*****************
+ * TÍTULO FICHA  *
+ *****************/
+
+.titulo-ficha {
+  overflow: hidden;
+
+  width: 100%;
+  height: 20%;
+
+  border-bottom: 1px solid white;
+  
+  padding: 20px 15px;
+
+  font-family: 'orbitron';
+}
+
+.iconos-plataformas {
+  float: right;
+}
+
+.iconos-plataformas img {
+  width: 40px;
+
+  margin-left: 10px;
+}
+
+
+/********************
+ * CONTENIDO FICHA  *
+ ********************/
+
+.contenido-ficha {
+  position: relative;
+  
+  width: 100%;
+  height: 80%;
+
+  margin: 0 auto;
+  padding: 2% 0%;
+
+  font-family: 'jura';
+}
+
+
+/**********************
+ * COLUMNA IZQUIERDA  *
+ **********************/
+
+.contenido-ficha-izq {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  width: 38%;
+  height: 100%;
+}
+
+.portada-ficha {
+  display: block;
+
+  width: 80%;  
+  margin: 0 auto;
+  border: 2px solid white;
+}
+
+.boton-cerrar {
+  position: absolute;
+  bottom: 0;
+  outline: none;
+  background-color: #00A376;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 2%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px black;
+}
+
+.boton-cerrar:hover {
+  cursor: pointer;
+  background-color: #22C598;
+  box-shadow: 0px 0px 10px 5px black;
+}
+
+.pegi {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 2%;
+  height: 20%;
+}
+
+/********************
+ * COLUMNA DERECHA  *
+ ********************/
+
+.contenido-ficha-dcha {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  width: 58%;
+  height: 96%;
+  border-left: 1px solid white;
+  
+}
+
+.datos-ficha {
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 60%;
+
+  padding: 20px;
+}
+
+.dato {
+  margin-bottom: 1%;
+}
+
+.descripcion {
+  margin-top: 10%;
+}
+
+.descripcion p {
+  text-align: justify;
+  margin-bottom: 3%;
+}
