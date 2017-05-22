@@ -77,7 +77,7 @@ $("#doom").hover(function() {
 $("#life-strange").click(function() {
     $("#ficha").fadeToggle("slow", "linear");
     $(".caja").css( { "animation-play-state": "paused" } );
-    $("body").css( { "background-image": 'url("img/rocketgif.gif")' } );
+    $("body").css( { "background-image": 'url("img/life-strange.gif")' } );
     
 });
 

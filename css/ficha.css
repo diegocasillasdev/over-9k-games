@@ -104,6 +104,8 @@
 }
 
 .boton-cerrar {
+  text-transform: uppercase;
+  font-family: 'orbitron';
   position: absolute;
   bottom: 0;
   outline: none;
