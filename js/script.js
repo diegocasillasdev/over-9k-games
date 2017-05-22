@@ -33,12 +33,65 @@ $("#life-strange").hover(function() {
 
     $("body").css( {"background-image": 'url("img/life-strange.gif")' } );
 }, function() {
+    /* Evita que se ejecute si el elemento ha sido clicado */
     if (!clicked) {
-        $(".caja").css({"animation-play-state": "running"});
-        $(this).attr("src", "img/life-strange.jpg");
-        $("body").css( { "background-image": 'url("img/fondo.jpg")' });
+        reiniciar($(this));
     }
 });
+
+function reiniciar(elemento) {
+    $(".caja").css({"animation-play-state": "running"});
+    elemento.attr("src", "img/life-strange.jpg");
+    $("body").css( { "background-image": 'url("img/fondo.jpg")' });
+}
+
+
+
+
+
+/*  FUNCIONES PARA CLICK  */ 
+$("#life-strange").click(function() {
+    var elemento = $(this);
+
+    abrirFicha(elemento);
+
+    $(".boton-cerrar").click(function() {
+        cerrarFicha(elemento);
+    })
+    
+});
+
+
+function abrirFicha(elemento) {
+    clicked = true;
+
+    $("#ficha").fadeIn("fast", "linear");
+    $(".caja").css( { "animation-play-state": "paused" } );
+    $("body").css( { "background-image": 'url("img/life-strange.gif")' } );
+}
+
+
+function cerrarFicha(elemento) {
+    clicked = false;
+
+    $("#ficha").fadeOut("fast", "linear");
+    $(".caja").css({"animation-play-state": "running"});
+    $("body").css( { "background-image": 'url("img/fondo.jpg")' });
+
+    elemento.attr("src", "img/life-strange.jpg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 $("#tiny").hover(function() {
     $(".caja").css( { "animation-play-state": "paused" } );
@@ -79,18 +132,3 @@ $("#doom").hover(function() {
 
 
 
-$("#life-strange").click(function() {
-    clicked = true;
-    $("#ficha").fadeToggle("slow", "linear");
-    $(".caja").css( { "animation-play-state": "paused" } );
-    $("body").css( { "background-image": 'url("img/life-strange.gif")' } );
-    
-});
-
-
-function cerrarFicha() {
-    clicked = false;
-    $("#ficha").fadeToggle("fast", "linear");
-    $(".caja").css({"animation-play-state": "running"});
-    $("body").css( { "background-image": 'url("img/fondo.jpg")' });
-}
