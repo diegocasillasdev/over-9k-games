@@ -24,6 +24,7 @@ $(".imagen-juego").hover(function() {
 });
 
 
+/* Indica si la imagen del slider ha sido clicada */
 var clicked = false;
 
 
