@@ -55,24 +55,8 @@ P {
     text-align: justify;
 }
 
-button {
-    border: none;  
-    background-color: #00A376;      
-        border-radius: 5px;
-        box-shadow: 0px 0px 15px black; 
-    margin: 40px;
-    font-family: 'orbitron';        
-}
 
-button a {
-    display: block;
-    text-decoration: none;
-    padding: 10px;
 
-        color: white;
-        text-decoration: none;
-  
-}
 
 .imagen-juego {
     display: block;
@@ -393,9 +377,19 @@ background-color: rgba(0, 0, 0, 0.5);
 }
 
 .portada-ficha {
+    display: block;
+    clear: both;
     margin-top: 30px;
     width: 30%;
     border: 2px solid white;
+}
+
+.contenido-ficha-izq {
+    width: 40%;
+}
+
+.contenido-ficha-dcha {
+    width: 60%;
 }
 
 .datos-ficha {
@@ -403,8 +397,17 @@ background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     top: 0;
     right: 0;
-    width: 60%;
     height: 60%;
     position: absolute;
     border-left: 1px solid white;
+}
+
+button {
+    background-color: #00A376;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0  5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px black;          
 }
