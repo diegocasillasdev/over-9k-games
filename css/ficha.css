@@ -161,6 +161,10 @@
   margin-bottom: 1%;
 }
 
+.dato span {
+  font-weight: bold;
+}
+
 .descripcion {
   margin-top: 10%;
 }
