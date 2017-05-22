@@ -161,7 +161,7 @@
   margin-bottom: 1%;
 }
 
-.dato span {
+.dato span:first-child {
   font-weight: bold;
 }
 
