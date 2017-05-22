@@ -21,51 +21,51 @@ var rutasImagenes = [
 ];
 
 var fichas = [
-    {   
-        id : "life-strange", // #id
-        titulo : "Life is Strange", // Título
+    {
+        id: "life-strange", // #id
+        titulo: "Life is Strange", // Título
 
         /* PLATAFORMAS */
 
-        portada : "img/life-strangecaratula.jpg", // Portada
-        pegi : "img/16.gif", // PEGI
-        desarrollador : "DONTNOD Entertainment", // Desarrollador
-        genero : "Aventura", // Género
-        precio : "19,99€", // Precio
-        fecha : "30-1-2015", // Fecha
+        portada: "img/life-strangecaratula.jpg", // Portada
+        pegi: "img/16.gif", // PEGI
+        desarrollador: "DONTNOD Entertainment", // Desarrollador
+        genero: "Aventura", // Género
+        precio: "19,99€", // Precio
+        fecha: "30-1-2015", // Fecha
 
-        /* DESCRIPCION */ 
-        descripcion : "Sigue la historia de Max Caulfield, una estudiante de fotografía que descubre que es capaz de retroceder en el tiempo al salvar a su mejor amiga, Chloe Price." + 
+        /* DESCRIPCION */
+        descripcion: "Sigue la historia de Max Caulfield, una estudiante de fotografía que descubre que es capaz de retroceder en el tiempo al salvar a su mejor amiga, Chloe Price." +
         "Juntas comienzan a investigar la misteriosa desaparición de otra estudiante, Rachel Amber, y pronto descubren el lado más oscuro de Arcadia Bay. Max debe aprender cuanto antes que cambiar el pasado a veces puede traer consecuencias desastrosas en el futuro.",
-        
-        /* MINIATURAS */ 
-        miniatura1 : "img/life-strange-miniatura1.jpg",
-        miniatura2 : "img/life-strange-miniatura2.jpg",
-        miniatura3 : "img/life-strange-miniatura3.jpg",
-        miniatura4 : "img/life-strange-miniatura4.jpg",
+
+        /* MINIATURAS */
+        miniatura1: "img/life-strange-miniatura1.jpg",
+        miniatura2: "img/life-strange-miniatura2.jpg",
+        miniatura3: "img/life-strange-miniatura3.jpg",
+        miniatura4: "img/life-strange-miniatura4.jpg",
     },
 
     {
-        id : "doom", // #id
-        titulo : "Doom", // Título
+        id: "doom", // #id
+        titulo: "Doom", // Título
 
         /* PLATAFORMAS */
 
-        portada : "img/doomcaratula.jpg", // Portada
-        pegi : "img/18.gif", // PEGI
-        desarrollador : "Id Software", // Desarrollador
-        genero : "First Person Shooter", // Género
-        precio : "59,99€", // Precio
-        fecha : "13-5-2016", // Fecha
+        portada: "img/doomcaratula.jpg", // Portada
+        pegi: "img/18.gif", // PEGI
+        desarrollador: "Id Software", // Desarrollador
+        genero: "First Person Shooter", // Género
+        precio: "59,99€", // Precio
+        fecha: "13-5-2016", // Fecha
 
-        /* DESCRIPCION */ 
-        descripcion : "DOOM, desarrollado por id Software, estudio pionero en el género de los shooters en primera persona y creador de las partidas multijugador en formato Deathmatch, regresa una vez más como un moderno shooter repleto de diversión y desafíos.",
-        
-        /* MINIATURAS */ 
-         miniatura1 : "img/doom-miniatura1.jpg",
-         miniatura2 : "img/doom-miniatura2.jpg",
-         miniatura3 : "img/doom-miniatura3.jpg",
-         miniatura4 : "img/doom-miniatura4.jpg",
+        /* DESCRIPCION */
+        descripcion: "DOOM, desarrollado por id Software, estudio pionero en el género de los shooters en primera persona y creador de las partidas multijugador en formato Deathmatch, regresa una vez más como un moderno shooter repleto de diversión y desafíos.",
+
+        /* MINIATURAS */
+        miniatura1: "img/doom-miniatura1.jpg",
+        miniatura2: "img/doom-miniatura2.jpg",
+        miniatura3: "img/doom-miniatura3.jpg",
+        miniatura4: "img/doom-miniatura4.jpg",
     },
     ["tiny", "img/tiny.png", "img/tinygif.gif"],
     ["rocket", "img/rocket.jpg", "img/rocketgif.gif"]
@@ -134,15 +134,17 @@ $(".imagen-juego").click(function () {
         if (juego === fichas[i]["id"]) {
             abrirFicha(elemento, i);
 
+            $(".boton-cerrar").click(function () {
+                cerrarFicha(elemento, i);
+            })
+
             break;
         }
     }
 
 
 
-    $(".boton-cerrar").click(function () {
-        cerrarFicha(elemento);
-    })
+
 
 });
 
@@ -154,8 +156,7 @@ function abrirFicha(elemento, i) {
     $(".caja").css({ "animation-play-state": "paused" });
     $("body").css({ "background-image": 'url(' + rutasImagenes[i][2] + ')' });
 
-        /*  RELLENAR FICHA  */
-
+    /* Rellena la ficha */
     $(".titulo-ficha div h3").text(fichas[i]["titulo"]);
     $(".portada-ficha").attr("src", fichas[i]["portada"]);
     $(".pegi").attr("src", fichas[i]["pegi"]);
@@ -171,12 +172,12 @@ function abrirFicha(elemento, i) {
 }
 
 
-function cerrarFicha(elemento) {
+function cerrarFicha(elemento, i) {
     clicked = false;
 
     $("#ficha").fadeOut("fast", "linear");
     $(".caja").css({ "animation-play-state": "running" });
     $("body").css({ "background-image": 'url("img/fondo.jpg")' });
 
-    elemento.attr("src", "img/life-strange.jpg");
+    elemento.attr("src", rutasImagenes[i][1]);
 }
