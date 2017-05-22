@@ -55,6 +55,12 @@
   font-family: 'orbitron';
 }
 
+.titulo-ficha div h3 {
+  display: inline-block;
+  font-size: 2.5em;
+  line-height: 2.5em;
+}
+
 .iconos-plataformas {
   float: right;
 }
