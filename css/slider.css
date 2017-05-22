@@ -48,10 +48,6 @@
   animation: slider 12000ms ease infinite;
 }
 
-.caja:hover {
-  animation-play-state: paused;
-}
-
 .elemento-slider {
   width: 25%;
   float: left;

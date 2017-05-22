@@ -24,15 +24,20 @@ $(".imagen-juego").hover(function() {
 });
 
 
+var clicked = false;
+
+
 $("#life-strange").hover(function() {
     $(".caja").css( { "animation-play-state": "paused" } );
     $(this).attr("src", "img/life-strange.gif");
 
     $("body").css( {"background-image": 'url("img/life-strange.gif")' } );
 }, function() {
-    $(".caja").css({"animation-play-state": "running"});
-    $(this).attr("src", "img/life-strange.jpg");
-    $("body").css( { "background-image": 'url("img/fondo.jpg")' });
+    if (!clicked) {
+        $(".caja").css({"animation-play-state": "running"});
+        $(this).attr("src", "img/life-strange.jpg");
+        $("body").css( { "background-image": 'url("img/fondo.jpg")' });
+    }
 });
 
 $("#tiny").hover(function() {
@@ -75,6 +80,7 @@ $("#doom").hover(function() {
 
 
 $("#life-strange").click(function() {
+    clicked = true;
     $("#ficha").fadeToggle("slow", "linear");
     $(".caja").css( { "animation-play-state": "paused" } );
     $("body").css( { "background-image": 'url("img/life-strange.gif")' } );
@@ -83,7 +89,7 @@ $("#life-strange").click(function() {
 
 
 function cerrarFicha() {
-
+    clicked = false;
     $("#ficha").fadeToggle("fast", "linear");
     $(".caja").css({"animation-play-state": "running"});
     $("body").css( { "background-image": 'url("img/fondo.jpg")' });
