@@ -22,10 +22,11 @@ body {
     /* Ajustes para fondo gif */
     background-repeat: no-repeat;
     background-size: cover;
-
+/* quitar 
     position: absolute;
   left: 0;
   right: 0;
+  */
 }
 
 hr {
