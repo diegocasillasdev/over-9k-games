@@ -79,9 +79,11 @@ function abrirFicha(elemento, i) {
     /* Rellena la ficha */
     $(".titulo-ficha div h3").text(fichas[i]["titulo"]);
 
-    /************** Poner plataformas
-        $(".plataformas").
-    */
+
+    /* Recorre el array de plataformas de la ficha y adjunta sus iconos a la ficha */
+    for (var j = 0; j < fichas[i]["plataformas"].length; j++) {
+        $( ".iconos-plataformas" ).append( '<img src="' + fichas[i]["plataformas"][j] + '">' );
+    }
 
     $(".portada-ficha").attr("src", fichas[i]["portada"]);
     $(".pegi").attr("src", fichas[i]["pegi"]);
@@ -89,11 +91,16 @@ function abrirFicha(elemento, i) {
     $("#genero").text(fichas[i]["genero"]);
     $("#precio").text(fichas[i]["precio"]);
     $("#fecha-lanzamiento").text(fichas[i]["fecha"]);
-    $("#descripcion").text(fichas[i]["descripcion"]);
-    $("#miniatura1").attr("src", fichas[i]["miniatura1"]);
-    $("#miniatura2").attr("src", fichas[i]["miniatura2"]);
-    $("#miniatura3").attr("src", fichas[i]["miniatura3"]);
-    $("#miniatura4").attr("src", fichas[i]["miniatura4"]);
+
+    /* Recorre el array de descripcion de la ficha y adjunta sus párrafos a la ficha */
+    for (var j = 0; j < fichas[i]["descripcion"].length; j++) {
+        $("#descripcion").append('<p>' + fichas[i]["descripcion"][j] + '</p>');
+    }
+
+    /* Recorre el array de miniaturas de la ficha y adjunta sus imagenes a la ficha */
+    for (var j = 0; j < fichas[i]["miniaturas"].length; j++) {
+        $("#miniaturas").append('<img src="' + fichas[i]["miniaturas"][j] + '">');
+    }
 }
 
 
@@ -105,4 +112,9 @@ function cerrarFicha(elemento, i) {
     $("body").css({ "background-image": 'url("img/fondo.jpg")' });
 
     elemento.attr("src", rutasImagenes[i][1]);
+
+    /* Vacía algunos elementos de la ficha */
+    $(".iconos-plataformas").empty();
+    $("#descripcion").empty();
+    $("#miniaturas").empty();
 }
