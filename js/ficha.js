@@ -78,6 +78,11 @@ function abrirFicha(elemento, i) {
 
     /* Rellena la ficha */
     $(".titulo-ficha div h3").text(fichas[i]["titulo"]);
+
+    /************** Poner plataformas
+        $(".plataformas").
+    */
+
     $(".portada-ficha").attr("src", fichas[i]["portada"]);
     $(".pegi").attr("src", fichas[i]["pegi"]);
     $("#desarrollador").text(fichas[i]["desarrollador"]);

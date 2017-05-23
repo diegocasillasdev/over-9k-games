@@ -11,6 +11,14 @@ var fichas = [
         titulo: "Life is Strange", // Título
 
         /* PLATAFORMAS */
+        plataformas: [
+            "img/steam.ico",
+            "img/ps3.jpg",
+            "img/ps4.png",
+            "img/360.png",
+            "img/xbox.ico"
+        ],
+
 
         portada: "img/life-strangecaratula.jpg", // Portada
         pegi: "img/16.gif", // PEGI
@@ -22,7 +30,13 @@ var fichas = [
         /* DESCRIPCION */
         descripcion: "Sigue la historia de Max Caulfield, una estudiante de fotografía que descubre que es capaz de retroceder en el tiempo al salvar a su mejor amiga, Chloe Price." +
         "Juntas comienzan a investigar la misteriosa desaparición de otra estudiante, Rachel Amber, y pronto descubren el lado más oscuro de Arcadia Bay. Max debe aprender cuanto antes que cambiar el pasado a veces puede traer consecuencias desastrosas en el futuro.",
-
+        
+        miniaturas: [
+            "img/life-strange-miniatura1.jpg",
+            "img/life-strange-miniatura2.jpg",
+            "img/life-strange-miniatura3.jpg",
+            "img/life-strange-miniatura4.jpg",
+        ],
         /* MINIATURAS */
         miniatura1: "img/life-strange-miniatura1.jpg",
         miniatura2: "img/life-strange-miniatura2.jpg",
