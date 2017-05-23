@@ -55,7 +55,7 @@ function reiniciar(elemento, i) {
 
 
 /*  FUNCIONES PARA ABRIR Y CERRAR FICHA */
-$(".imagen-juego").click(function () {
+$(".imagen-juego, .abrir").click(function () {
     var elemento = $(this);
 
     var juego = $(this).attr("id");

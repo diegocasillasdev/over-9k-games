@@ -2,16 +2,28 @@
 <html>
 
 <head>
-    <title>Over 9k Games</title>
-    <meta charset="utf-8">
-    <link rel="icon" href="../img/9k.ico" />
-    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
-    <link rel="stylesheet" type="text/css" href="../css/slider.css">
-    <link rel="stylesheet" type="text/css" href="../css/ficha.css">
-    <link rel="stylesheet" type="text/css" href="../css/simple-scrollbar.css">
+    <base>
+    <script>
+        var ruta = location.pathname;
+        ruta = ruta.substring(0, ruta.indexOf('over-9k-games'));
+        ruta += 'over-9k-games/';
 
-    <script src="../js/jquery-3.2.1.js"></script>
-    <script src="../js/simple-scrollbar.min.js"></script>
+        document.querySelector('base').href = ruta;
+    </script>
+
+    <title>Over 9k Games</title>
+
+    <meta charset="utf-8">
+
+    <link rel="icon" href="img/9k.ico" />
+    
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/ficha.css">
+    <link rel="stylesheet" type="text/css" href="css/simple-scrollbar.css">
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/simple-scrollbar.min.js"></script>
 </head>
 
 <body>
@@ -32,9 +44,6 @@
                 <!-- Columna izquierda -->
                 <div class="contenido-ficha-izq">
                     <img class="portada-ficha" src="">
-
-                    <a href="#" id="boton-leer" class="boton-ficha leer">Leer</a>
-
                     <input type="button" id="boton-cerrar" class="boton-ficha cerrar" value="cerrar">
                 </div>
                 <!-- Columna derecha -->
@@ -81,7 +90,7 @@
             </div>
             <nav class="menu">
                 <ul clasS="menu-principal">
-                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="#">+ info</a>
                         <ul class="submenu">
                             <li><a href="#">hola</a></li>
@@ -98,8 +107,8 @@
                 <input list="juegos" class="buscador" placeholder="Buscar...">
                 <datalist id="juegos">
                     <option value="Tiny and Big">
-                        <option value="Rocket League">
-                            <option value="Doom">
+                    <option value="Rocket League">
+                    <option value="Doom">
                 </datalist>
             </nav>
         </header>
@@ -107,9 +116,10 @@
         <section class="portada">
 
 
-            <img class="imagen-juego" src="../img/tiny.png" alt="Tiny and Big">
+            <img class="imagen-juego" src="img/tiny.png" alt="Tiny and Big">
 
             <h1 class="titulo-opinion">Tiny and Big: Grandpa's Leftovers</h1>
+            <input type="button" id="tiny" class="boton-ficha leer abrir" value="ver ficha">
             <p>
                 Tiny and Big: Grandpa’s Leftovers es un juego indie desarrollado por Black Pants. Ser un juego indie significa que ha sido
                 hecho por un estudio de videojuegos independiente, normalmente formado por pocas personas o incluso un único
@@ -144,12 +154,11 @@
                 a Tiny a recuperar lo que su adorable abuelo le dejó en su lecho de muerte. A lo mejor esos calzoncillos
                 no son meros calzoncillos.
             </p>
-
         </section>
     </main>
-    <script src="../js/menu.js"></script>
-    <script src="../js/fichas.js"></script>
-    <script src="../js/ficha.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/fichas.js"></script>
+    <script src="js/ficha.js"></script>
 </body>
 
 </html>
