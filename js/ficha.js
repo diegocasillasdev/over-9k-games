@@ -1,3 +1,7 @@
+/* Activa la barra de scroll para la columna derecha de la ficha */
+var contenidoFichaDcha = document.querySelector('.contenido-ficha-dcha');
+SimpleScrollbar.initEl(contenidoFichaDcha);
+
 /* Indica si la imagen del slider ha sido clicada */
 var clicked = false;
 
@@ -59,7 +63,7 @@ $(".imagen-juego").click(function () {
         if (juego === fichas[i]["id"]) {
             abrirFicha(elemento, i);
 
-            $(".boton-cerrar").click(function () {
+            $("#boton-cerrar").click(function () {
                 cerrarFicha(elemento, i);
             })
 
@@ -118,3 +122,5 @@ function cerrarFicha(elemento, i) {
     $("#descripcion").empty();
     $("#miniaturas").empty();
 }
+
+
