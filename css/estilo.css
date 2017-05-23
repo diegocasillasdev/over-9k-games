@@ -33,25 +33,7 @@ hr {
     margin: 0 auto;
 }
 
-.video {
-    width: 566px;
-    border: 3px solid white;
-    margin: 0px auto;
-    text-align: center;
-}
 
-.titulo-opinion {
-    margin: 80px;
-}
-
-.opinion p {
-    padding: 0 20px;
-    margin-bottom: 20px;
-    line-height: 2em;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    text-align: justify;
-}
 
 
 
@@ -241,12 +223,12 @@ section {
     }
 
 
+
 .portada {
     width: 80%;
     margin: 0 auto;
     padding: 40px;
 }
-
 
 
 

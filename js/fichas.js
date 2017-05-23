@@ -24,7 +24,7 @@ var rutasImagenes = [
 var fichas = [
     {
         id: "life-strange",
-        opinion: "opiniones/tiny-and-big.html",
+        opinion: "opiniones/life-is-strange.html",
         titulo: "Life is Strange",
         plataformas: [
             "img/steam.ico",
