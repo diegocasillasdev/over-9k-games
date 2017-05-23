@@ -105,6 +105,7 @@ function abrirFicha(elemento, i) {
     for (var j = 0; j < fichas[i]["miniaturas"].length; j++) {
         $("#miniaturas").append('<img src="' + fichas[i]["miniaturas"][j] + '">');
     }
+
 }
 
 
@@ -124,3 +125,22 @@ function cerrarFicha(elemento, i) {
 }
 
 
+/* Evento para ir a la opinión */
+
+$("#boton-leer").click(function() {
+    var juego = $(this).attr("id");
+
+    /* Recorre el array de rutas buscando el id del elemento sobre el que se ha hecho clic */
+    for (var i = 0; i < fichas.length; i++) {
+        /* Al encontrar el id del juego, pausa el slider y cambia el fondo y la imagen */
+        if (juego === fichas[i]["id"]) {
+            abrirFicha(elemento, i);
+
+            $("#boton-cerrar").click(function () {
+                cerrarFicha(elemento, i);
+            })
+
+            break;
+        }
+    }
+});

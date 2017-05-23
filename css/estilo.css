@@ -28,6 +28,10 @@ body {
     /* Ajustes para fondo gif */
     background-repeat: no-repeat;
     background-size: cover;
+
+    position: absolute;
+  left: 0;
+  right: 0;
 }
 
 hr {
@@ -99,6 +103,17 @@ main {
     /* Transparencias para dejar ver el gif */
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.55);
+    
+}
+
+.centrar-todo {
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
 }
 
 section {

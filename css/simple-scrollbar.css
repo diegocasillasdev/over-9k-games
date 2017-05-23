@@ -10,7 +10,7 @@
 .ss-content {
   height: 100%;
   width: 100%;
-  padding: 0 10px 0 0;
+  padding: 0 36px 0 0;
   position: relative;
   right: -18px;
   overflow: auto;
@@ -20,8 +20,9 @@
 .ss-scroll {
   position: relative;
   background: #00A376;
-  width: 7px;
-  border-radius: 2px;
+  width: 5px;
+  margin: -10px;
+  border-radius: 4px;
   top: 0;
   z-index: 2;
   cursor: pointer;

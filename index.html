@@ -9,12 +9,12 @@
   <link rel="stylesheet" type="text/css" href="css/slider.css">
   <link rel="stylesheet" type="text/css" href="css/ficha.css">
   <link rel="stylesheet" type="text/css" href="css/simple-scrollbar.css">
-  
+
   <script src="js/jquery-3.2.1.js"></script>
   <script src="js/simple-scrollbar.min.js"></script>
 </head>
 
-<body class="ss-container">
+<body>
 
   <!-- Ficha -->
   <div id="ficha" class="ficha">
@@ -33,11 +33,9 @@
         <div class="contenido-ficha-izq">
           <img class="portada-ficha" src="">
 
-          <button id="boton-leer" class="boton-ficha leer">Leer</button>
-          
-          <button id="boton-cerrar" class="boton-ficha cerrar">Volver</button>
+          <a href="#" id="boton-leer" class="boton-ficha leer">Leer</a>
 
-          <img class="pegi">
+          <input type="button" id="boton-cerrar" class="boton-ficha cerrar">
         </div>
         <!-- Columna derecha -->
         <div class="contenido-ficha-dcha">
@@ -58,8 +56,15 @@
               <span>Fecha de lanzamiento: </span>
               <span id="fecha-lanzamiento"></span>
             </div>
+            <img class="pegi">
+
+            <hr class="divisor-ficha">
+
             <div id="descripcion" class="descripcion">
             </div>
+
+            <hr class="divisor-ficha">
+
             <div id="miniaturas" class="miniaturas">
             </div>
           </div>
@@ -69,66 +74,68 @@
   </div>
 
   <main>
-    <header class="cabecera">
-      <div class="titulo-principal">
-        <h1>Over 9k Games!</h1>
-        <div class="subtitulo">Opiniones desenfadadas</div>
-      </div>
-      <nav class="menu">
-        <ul clasS="menu-principal">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="#">+ info</a>
-            <ul class="submenu">
-              <li><a href="#">hola</a></li>
-              <li><a href="#">q ase</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Opiniones</a>
-            <ul class="submenu">
-              <li><a href="#">Indies</a></li>
-              <li><a href="#">Comerciales</a></li>
-            </ul>
-          </li>
-        </ul>
-        <input list="juegos" class="buscador" placeholder="Buscar...">
-        <datalist id="juegos">
-          <option value="Tiny and Big">
-            <option value="Rocket League">
-              <option value="Doom">
-        </datalist>
-      </nav>
-    </header>
-    <hr>
-    <section class="portada">
-      <div class="contenedor">
-        <div class="caja">
-          <div class="elemento-slider">
-            <article class="imagen-texto">
-              <img id="life-strange" class="imagen-juego" src="img/life-strange.jpg" alt="Life is Strange">
-              <h2><span>Life is Strange</span></h2>
-            </article>
-          </div>
-          <div class="elemento-slider">
-            <article class="imagen-texto">
-              <img id="doom" class="imagen-juego" src="img/doom.jpg" alt="Doom">
-              <h2><span>Doom</span></h2>
-            </article>
-          </div>
-          <div class="elemento-slider">
-            <article class="imagen-texto">
-              <img id="tiny" class="imagen-juego" src="img/tiny.png" alt="Tiny and Big">
-              <h2><span>Tiny & Big</span></h2>
-            </article>
-          </div>
-          <div class="elemento-slider">
-            <article class="imagen-texto">
-              <img id="rocket" class="imagen-juego" src="img/rocket.jpg" alt="Rocket League">
-              <h2><span>Rocket League</span></h2>
-            </article>
+    <div class="centrar-todo">
+      <header class="cabecera">
+        <div class="titulo-principal">
+          <h1>Over 9k Games!</h1>
+          <div class="subtitulo">Opiniones desenfadadas</div>
+        </div>
+        <nav class="menu">
+          <ul clasS="menu-principal">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">+ info</a>
+              <ul class="submenu">
+                <li><a href="#">hola</a></li>
+                <li><a href="#">q ase</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Opiniones</a>
+              <ul class="submenu">
+                <li><a href="#">Indies</a></li>
+                <li><a href="#">Comerciales</a></li>
+              </ul>
+            </li>
+          </ul>
+          <input list="juegos" class="buscador" placeholder="Buscar...">
+          <datalist id="juegos">
+            <option value="Tiny and Big">
+              <option value="Rocket League">
+                <option value="Doom">
+          </datalist>
+        </nav>
+      </header>
+      <hr>
+      <section class="portada">
+        <div class="contenedor">
+          <div class="caja">
+            <div class="elemento-slider">
+              <article class="imagen-texto">
+                <img id="life-strange" class="imagen-juego" src="img/life-strange.jpg" alt="Life is Strange">
+                <h2><span>Life is Strange</span></h2>
+              </article>
+            </div>
+            <div class="elemento-slider">
+              <article class="imagen-texto">
+                <img id="doom" class="imagen-juego" src="img/doom.jpg" alt="Doom">
+                <h2><span>Doom</span></h2>
+              </article>
+            </div>
+            <div class="elemento-slider">
+              <article class="imagen-texto">
+                <img id="tiny" class="imagen-juego" src="img/tiny.png" alt="Tiny and Big">
+                <h2><span>Tiny & Big</span></h2>
+              </article>
+            </div>
+            <div class="elemento-slider">
+              <article class="imagen-texto">
+                <img id="rocket" class="imagen-juego" src="img/rocket.jpg" alt="Rocket League">
+                <h2><span>Rocket League</span></h2>
+              </article>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
   <script src="js/menu.js"></script>
   <script src="js/fichas.js"></script>

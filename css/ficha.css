@@ -75,12 +75,6 @@
  ********************/
 
 .contenido-ficha {
-  position: relative;
-  width: 100%;
-  height: 90%;
-
-  margin: 0 auto;
-
   font-family: 'jura';
 }
 
@@ -109,6 +103,8 @@
 
 
 .boton-ficha {
+  display: block;
+  text-align: center;
   width: 100%;
   margin: 2% 0;
   text-transform: uppercase;
@@ -141,11 +137,11 @@
 }
 
 .pegi {
-  display: none;
+  margin-right: 50px;
   position: absolute;
+  top: 0;
   right: 0;
-  bottom: 0;
-  width: 15%;
+  height: 12%;
 }
 
 /********************
@@ -160,24 +156,20 @@
   width: 62%;
   height: 100%;
   border-left: 1px solid white;
-  
+  padding-top: 18px;
   
 }
 
 .contenedor-datos {
-  position: absolute;
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .datos-ficha {
+  height: 100%;
   top: 0;
   left: 0;
-  
-  width: 100%;
-  height: 60%;
-
-  padding: 20px;
 }
 
 .dato {
@@ -188,17 +180,20 @@
   font-weight: bold;
 }
 
-.descripcion {
-  margin-top: 10%;
+
+.divisor-ficha {
+  margin: 40px 0;
+  width: 100%;
 }
+
 
 .descripcion p {
   text-align: justify;
+  padding: 0 3%;
   margin-bottom: 3%;
 }
 
 .miniaturas {
-  margin-top: 10%;
   width: 100%;
 
   text-align: center;
