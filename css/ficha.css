@@ -191,7 +191,7 @@
   border: 2px solid white;
 }
 
-.miniatura:hover {
+.miniaturas img:hover {
   cursor: pointer;
   filter: brightness(120%);
 }
