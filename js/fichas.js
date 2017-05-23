@@ -24,6 +24,7 @@ var rutasImagenes = [
 var fichas = [
     {
         id: "life-strange",
+        opinion: "opiniones/tiny-and-big.html",
         titulo: "Life is Strange",
         plataformas: [
             "img/steam.ico",
@@ -57,6 +58,7 @@ var fichas = [
 
     {
         id: "doom",
+        opinion: "opiniones/doom.html",
         titulo: "Doom",
         plataformas: [
             "img/steam.ico",
@@ -85,6 +87,7 @@ var fichas = [
 
     {
         id: "tiny",
+        opinion: "opiniones/tiny-and-big.html",
         titulo: "Tiny and Big",
         plataformas: [
             "img/steam.ico"
@@ -115,6 +118,7 @@ var fichas = [
 
     {
         id: "rocket",
+        opinion: "opiniones/rocket-league.html",
         titulo: "Rocket League",
         plataformas: [
             "img/steam.ico",

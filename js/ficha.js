@@ -2,6 +2,9 @@
 var contenidoFichaDcha = document.querySelector('.contenido-ficha-dcha');
 SimpleScrollbar.initEl(contenidoFichaDcha);
 
+var main = document.querySelector('main');
+SimpleScrollbar.initEl(main);
+
 /* Indica si la imagen del slider ha sido clicada */
 var clicked = false;
 
@@ -106,6 +109,7 @@ function abrirFicha(elemento, i) {
         $("#miniaturas").append('<img src="' + fichas[i]["miniaturas"][j] + '">');
     }
 
+    $("#boton-leer").attr("href", fichas[i]["opinion"]);
 }
 
 
