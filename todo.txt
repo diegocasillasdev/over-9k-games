@@ -12,7 +12,7 @@
 12- Añadir botón de volver arriba y salir en las opiniones.
 13- Ajustar tamaño de los vídeos en las opiniones
 14- Cambiar if por switch en la función que cambia el color de fondo de la nota.
-15- Añadir redes sociales
+15- Añadir redes sociales + web del juego en la ficha
 16- Algo más que se me olvida
 
 .- Memoria entera
