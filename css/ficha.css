@@ -209,3 +209,28 @@
   cursor: pointer;
   filter: brightness(120%);
 }
+
+
+.nota {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    width: 10%;
+    border: 2px solid white;
+    font-weight: bold;
+    font-family: 'orbitron';
+    
+}
+
+.texto-nota {
+    line-height: 30px;
+    height: 30px;
+    background-color: black;
+    border-bottom: 1px solid white;
+}
+
+.puntuacion {
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.5em;
+}

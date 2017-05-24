@@ -93,6 +93,7 @@ var fichas = [
             "img/steam.ico"
         ],
         portada: "img/tinycaratula.jpg",
+        puntuacion: "6",
         pegi: "img/7.gif",
         desarrollador: "Black Pants Studio",
         genero: "Indie",

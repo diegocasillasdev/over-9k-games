@@ -89,10 +89,20 @@ function abrirFicha(elemento, i) {
 
     /* Recorre el array de plataformas de la ficha y adjunta sus iconos a la ficha */
     for (var j = 0; j < fichas[i]["plataformas"].length; j++) {
-        $( ".iconos-plataformas" ).append( '<img src="' + fichas[i]["plataformas"][j] + '">' );
+        $(".iconos-plataformas").append('<img src="' + fichas[i]["plataformas"][j] + '">');
     }
 
     $(".portada-ficha").attr("src", fichas[i]["portada"]);
+    $("#puntuacion").text(fichas[i]["puntuacion"]);
+
+    if (fichas[i]["puntuacion"] < 5) {
+        $("#puntuacion").css({ "background-color": "red" });
+    } else if (fichas[i]["puntuacion"] >= 5 && fichas[i]["puntuacion"] <= 6) {
+        $("#puntuacion").css({ "background-color": "orange" });
+    } else {
+        $("#puntuacion").css({ "background-color": "green" });
+    }
+
     $(".pegi").attr("src", fichas[i]["pegi"]);
     $("#desarrollador").text(fichas[i]["desarrollador"]);
     $("#genero").text(fichas[i]["genero"]);
@@ -131,7 +141,7 @@ function cerrarFicha(elemento, i) {
 
 /* Evento para ir a la opinión */
 
-$("#boton-leer").click(function() {
+$("#boton-leer").click(function () {
     var juego = $(this).attr("id");
 
     /* Recorre el array de rutas buscando el id del elemento sobre el que se ha hecho clic */
@@ -148,3 +158,6 @@ $("#boton-leer").click(function() {
         }
     }
 });
+
+var puntuacion = document.querySelector("#puntuacion");
+
