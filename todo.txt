@@ -1,0 +1,19 @@
+1- Formulario + slider manual
+2- Opiniones + imágenes
+3- Arreglar tamaño de la ficha
+4- Colocar nota en la ficha y la opinión
+5- Arreglar tamaño de las cabeceras
+6- Hacer que las imágenes de la ficha sean ampliables
+7- Submenús
+8- Organizar las imágenes y cambiar las rutas
+9- Comentar el código y organizarlo
+10- Hacer que la ficha no se pueda abrir una vez abierta
+11- Programar buscador
+12- Añadir botón de volver arriba y salir en las opiniones.
+13- Ajustar tamaño de los vídeos en las opiniones
+14- Cambiar if por switch en la función que cambia el color de fondo de la nota.
+15- Añadir redes sociales
+16- Algo más que se me olvida
+
+.- Memoria entera
+PUTA BIDA
