@@ -2,9 +2,6 @@
 var contenidoFichaDcha = document.querySelector('.contenido-ficha-dcha');
 SimpleScrollbar.initEl(contenidoFichaDcha);
 
-var main = document.querySelector('main');
-SimpleScrollbar.initEl(main);
-
 /* Indica si la imagen del slider ha sido clicada */
 var clicked = false;
 

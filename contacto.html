@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Over 9k Games</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="img/9k.ico">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/contacto.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/simple-scrollbar.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/simple-scrollbar.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <header class="cabecera">
+            <div class="titulo-principal">
+                <h1>Over 9k Games!</h1>
+                <div class="subtitulo">Opiniones desenfadadas</div>
+            </div>
+            <nav class="menu">
+                <ul clasS="menu-principal">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">+ info</a>
+                        <ul class="submenu">
+                            <li><a href="#">Over 9k Games</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Opiniones</a>
+                        <ul class="submenu">
+                            <li><a href="#">Indies</a></li>
+                            <li><a href="#">Comerciales</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <input list="juegos" class="buscador" placeholder="Buscar...">
+                <datalist id="juegos">
+                    <option value="Tiny and Big">
+                        <option value="Rocket League">
+                            <option value="Doom">
+                </datalist>
+            </nav>
+        </header>
+        <hr>
+        <section class="portada">
+            <section>
+                <form class="formulario" method="POST" action="#">
+                    <h1>Formulario de contacto</h1>
+                    <p>
+                        ¿Tienes alguna duda, sugerencia o comentario?
+                        <br> Estamos encantados de recoger tu mensaje, pero antes necesitamos algunos datos.
+                        <br>
+                        <br>
+                        <small>* Los datos marcados con asterisco son obligatorios *</small>
+                    </p>
+
+
+                    <!-- Slider -->
+                    <div class="contenedor-slider-formulario">
+                        <div class="contenido-formulario">
+                            <div class="contenedor-campos">
+                                <div class="campo">
+                                    <div class="titulo-campo">Nombre *</div>
+                                    <input type="text" class="imprescindible" name="nombre" required>
+                                    <div id="icono-nombre"></div>
+                                </div>
+                                <div class="campo">
+                                    <div class="titulo-campo">Email *</div>
+                                    <input type="email" class="imprescindible" name="email" required>
+                                    <div id="icono-email"></div>
+                                </div>
+                                <div class="campo">
+                                    <span class="titulo-campo">¿Quieres recibir novedades de la web?</span>
+                                    <input type="checkbox" id="novedades" name="novedades">
+                                    <div class="mensaje-novedades">Recibirás un correo cada semana con las noticias y opinones de la web</div>
+                                </div>
+                                <div class="campo">
+                                    <div class="titulo-campo">¿Qué plataformas te interesan?</div>
+                                    <div id="icono-tematicas"></div>
+                                    <div class="contenedor-checkbox">
+                                        <span><input type="checkbox" class="tematica" name="tematicas">PC</span>
+                                        <span><input type="checkbox" class="tematica" name="tematicas">PS4</span>
+                                        <span><input type="checkbox" class="tematica" name="tematicas">Xbox One</span>
+                                    </div>
+                                    <div id="icono-tematicas"></div>
+                                </div>
+                            </div>
+
+                            <div class="contenedor-campos">
+                                <div class="campo">
+                                    <div class="titulo-campo">¿Qué nota le daría usted a mi página web del 0 al 10?</div>
+                                    <select name="nota">
+                                <option class="opcion" value="0">0</option>
+                                <option class="opcion" value="1">1</option>
+                                <option class="opcion" value="2">2</option>
+                                <option class="opcion" value="3">3</option>
+                                <option class="opcion" value="4">4</option>
+                                <option class="opcion" value="5">5</option>
+                                <option class="opcion" value="6">6</option>
+                                <option class="opcion" value="7">7</option>
+                                <option class="opcion" value="8">8</option>
+                                <option class="opcion" value="9">9</option>
+                                <option class="opcion" value="10">10</option>
+                            </select>
+                                </div>
+                                <div class="campo">
+                                    <div class="titulo-campo">Mensaje</div>
+                                    <textarea rows="20" name="sugerencias"></textarea><br>
+                                </div>
+                                <div class="contenedor-botones">
+                                    <input type="submit" id="enviar" class="boton-formulario" value="Enviar">
+                                    <input type="reset" id="reset" class="boton-formulario" value="Borrar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin slider -->
+
+
+                </form>
+            </section>
+        </section>
+        </div>
+    </main>
+    <script src="js/menu.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/fichas.js"></script>
+    <script src="js/ficha.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
