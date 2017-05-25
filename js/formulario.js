@@ -19,6 +19,11 @@ var enviar = document.querySelector('#enviar');
 
 var borrar = document.querySelector('#reset');
 
+// Recorre las fichas y añade una opción al select con los títulos
+for (var i = 0; i < fichas.length; i++) {
+    $(juego).append('<option class="opcion" value="' + fichas[i]["id"] + '">' + fichas[i]["titulo"] + '</option>');
+}
+
 /*************
  *  EVENTOS  *
  *************/
@@ -36,7 +41,8 @@ for (var i = 0; i < plataformas.length; i++) {
 
 juego.addEventListener('change', function () { comprobarjuego(); });
 
-borrar.addEventListener('click', function() { borrarFormulario(); });
+borrar.addEventListener('click', function () { borrarFormulario(); });
+
 
 /***************
  *  FUNCIONES  *

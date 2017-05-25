@@ -103,23 +103,13 @@
                             <div class="contenedor-campos">
                                 <div class="campo">
                                     <div class="titulo-campo">¿Sobre que juego deseas enviar un mensaje?</div>
-                                    <select id="juego" name="juego">
-                                        <option class="opcion" value="0">0</option>
-                                        <option class="opcion" value="1">1</option>
-                                        <option class="opcion" value="2">2</option>
-                                        <option class="opcion" value="3">3</option>
-                                        <option class="opcion" value="4">4</option>
-                                        <option class="opcion" value="5">5</option>
-                                        <option class="opcion" value="6">6</option>
-                                        <option class="opcion" value="7">7</option>
-                                        <option class="opcion" value="8">8</option>
-                                        <option class="opcion" value="9">9</option>
-                                        <option class="opcion" value="10">10</option>
+                                    <select id="juego" name="juego" required>
+                                        <option class="opcion" value="">Selecciona un juego</option>
                                     </select>
                                 </div>
                                 <div class="campo">
                                     <div class="titulo-campo">Mensaje</div>
-                                    <textarea rows="20" name="mensaje"></textarea>
+                                    <textarea rows="20" name="mensaje" required></textarea>
                                 </div>
                                 <div class="contenedor-botones">
                                     <input type="submit" id="enviar" class="boton-formulario" value="Enviar">
@@ -138,9 +128,9 @@
         </div>
     </main>
     <script src="js/menu.js"></script>
-    <script src="js/formulario.js"></script>
     <script src="js/fichas.js"></script>
     <script src="js/ficha.js"></script>
+    <script src="js/formulario.js"></script>
     <script src="js/script.js"></script>
 </body>
 
