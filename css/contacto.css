@@ -9,7 +9,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.55);
     text-align: center;
-    
+    position: relative;
 
 }
 
@@ -191,3 +191,21 @@
   margin-left: -100%;
 }
 
+.boton-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.boton-slider span {
+    font-size: 2.5em;
+    
+}
+
+.siguiente {
+    right: 20px;
+}
+
+.atras {
+    left: 20px;
+}
