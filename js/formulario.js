@@ -5,6 +5,10 @@
 // Selecciona todos los campos imprescindibles (menos las contraseñas)
 var imprescindibles = document.querySelectorAll('.imprescindible');
 
+var nombre = document.querySelector("#nombre");
+
+var email = document.querySelector("#email");
+
 // Checkbox de novedades
 var novedades = document.querySelector('#novedades');
 
@@ -33,6 +37,10 @@ for (var i = 0; i < imprescindibles.length; i++) {
     imprescindibles[i].addEventListener('keyup', function () { comprobarImprescindible(this); });
 }
 
+nombre.addEventListener('keyup', function() { comprobarNombre(); });
+
+email.addEventListener('keyup', function() { comprobarEmail(); });
+
 novedades.addEventListener('click', function () { comprobarNovedades(); });
 
 for (var i = 0; i < plataformas.length; i++) {
@@ -48,8 +56,8 @@ borrar.addEventListener('click', function () { borrarFormulario(); });
  *  FUNCIONES  *
  ***************/
 
-// Comprueba que todos los campos imprescindibles tienen una longitud mayor que 5
-function comprobarImprescindible(campo) {
+// Comprueba que todos los campos imprescindibles tienen una longitud mayor que 3
+/*function comprobarImprescindible(campo) {
     if (campo.value.length < 5) {
         campo.focus();
 
@@ -62,8 +70,43 @@ function comprobarImprescindible(campo) {
         campo.nextElementSibling.setAttribute('class', 'icon-checkmark');
         campo.nextElementSibling.textContent = "";
     }
+}*/
+
+var nombreCorrecto = false;
+
+function comprobarNombre() {
+    if (nombre.value.length === 0) {
+        nombre.style.backgroundColor = 'white';
+    } else if (nombre.value.length < 3) {
+        nombre.focus();
+
+        nombre.style.backgroundColor = 'lightcoral';
+
+        nombre.nextElementSibling.setAttribute('class', 'icon-cross');
+        nombre.nextElementSibling.textContent = "El nombre debe tener más de 3 caracteres";
+    } else {
+        nombreCorrecto = true;
+        
+        nombre.style.backgroundColor = 'lightgreen';
+        nombre.nextElementSibling.setAttribute('class', 'icon-checkmark');
+        nombre.nextElementSibling.textContent = "";
+    }
 }
 
+function comprobarEmail() {
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))  {
+        email.focus();
+
+        email.style.backgroundColor = 'lightcoral';
+
+        email.nextElementSibling.setAttribute('class', 'icon-cross');
+        email.nextElementSibling.textContent = "La dirección no es válida";
+    } else {
+        email.style.backgroundColor = 'lightgreen';
+        email.nextElementSibling.setAttribute('class', 'icon-checkmark');
+        email.nextElementSibling.textContent = "";
+    }
+}
 
 
 function comprobarNovedades() {
