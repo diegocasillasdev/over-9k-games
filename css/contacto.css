@@ -182,3 +182,12 @@
   width: 50%;
   float: left;
 }
+
+#atras:checked ~ .contenedor-slider-formulario > .contenido-formulario {
+  margin-left: 0;
+}
+
+#siguiente:checked ~ .contenedor-slider-formulario > .contenido-formulario {
+  margin-left: -100%;
+}
+

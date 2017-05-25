@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="icon" href="img/9k.ico">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/iconos.css">
     <link rel="stylesheet" type="text/css" href="css/contacto.css">
     <link rel="stylesheet" type="text/css" href="css/slider.css">
     <link rel="stylesheet" type="text/css" href="css/simple-scrollbar.css">
@@ -59,6 +60,10 @@
 
 
                     <!-- Slider -->
+                    <!-- Botones slider -->
+                    <input type="radio" name="slider" id="atras" checked>
+                    <input type="radio" name="slider" id="siguiente">
+
                     <div class="contenedor-slider-formulario">
                         <div class="contenido-formulario">
                             <div class="contenedor-campos">
@@ -87,6 +92,12 @@
                                     </div>
                                     <div id="icono-tematicas"></div>
                                 </div>
+
+                                <div class="botones-slider">
+                                    <label for="siguiente">
+                                        <span class="icon-circle-right"></span>
+                                    </label>
+                                </div>
                             </div>
 
                             <div class="contenedor-campos">
@@ -114,9 +125,34 @@
                                     <input type="submit" id="enviar" class="boton-formulario" value="Enviar">
                                     <input type="reset" id="reset" class="boton-formulario" value="Borrar">
                                 </div>
+
+                                <div class="botones-slider">
+                                    <label for="atras">
+                                        <span class="icon-circle-left"></span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- 
+                    <div class="botones-slider">
+                        <label for="siguiente">
+                            <div class="siguiente">
+                                <img class="checked" src="https://www.materialui.co/materialIcons/toggle/radio_button_on_black_192x192.png">
+                                <img class="unchecked" src="https://www.materialui.co/materialIcons/toggle/radio_button_off_grey_192x192.png">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="botones-slider">
+                        <label for="atras">
+                            <div class="atras">
+                                <img class="checked" src="https://www.materialui.co/materialIcons/toggle/radio_button_on_black_192x192.png">
+                                <img class="unchecked" src="https://www.materialui.co/materialIcons/toggle/radio_button_off_grey_192x192.png">
+                            </div>
+                        </label>
+                    </div>
+                    -->
                     <!-- Fin slider -->
 
 
