@@ -61,17 +61,12 @@ iframe {
 
 
 .mi-opinion {
-    position: relative;
     border: 2px solid white;
-      border-radius: 5px;
+    border-radius: 5px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.55);
 }
 
-.texto-mi-opinion {
-    display: inline-block;
-    width: 88%;
-}
 
 
