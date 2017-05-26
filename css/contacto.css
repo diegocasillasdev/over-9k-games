@@ -123,6 +123,9 @@
     visibility: hidden;
 }
 
+.mensaje {
+    visibility: hidden;
+}
 
 /* Botones */
 .contenedor-botones {
@@ -227,6 +230,7 @@
 .atras {
     left: 20px;
 }
+
 
 /* Ocultan los iconos si están marcados */
 #siguiente:checked ~ .contenedor-slider-formulario .siguiente {

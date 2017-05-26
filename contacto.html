@@ -106,7 +106,7 @@
                 </div>
 
                 <!-- Botón siguiente -->
-                <label for="siguiente" class="boton-slider siguiente">
+                <label for="siguiente" id="label-siguiente" class="boton-slider siguiente">
                   <span class="icon-circle-right"></span>
                 </label>
                 <!-- Fin botón siguiente -->
@@ -116,14 +116,14 @@
               <!-- Segundo elemento -->
               <div class="contenedor-campos">
                 <div class="campo">
-                  <div class="titulo-campo">¿Sobre qué juego deseas enviar un mensaje?</div>
-                  <select id="juego" name="juego" required>
+                  <div class="titulo-campo">¿Sobre qué juego deseas enviar un mensaje? *</div>
+                  <select id="juego" class="imprescindible" name="juego" required>
                     <option class="opcion" value="">Selecciona un juego</option>
                   </select>
                 </div>
                 <div class="campo">
-                  <div class="titulo-campo">Mensaje</div>
-                  <textarea rows="20" name="mensaje" required></textarea>
+                  <div class="titulo-campo mensaje">Mensaje *</div>
+                  <textarea rows="20" id="mensaje" class="mensaje imprescindible" name="mensaje" required></textarea>
                 </div>
 
                 <!-- Botones enviar y borrar -->

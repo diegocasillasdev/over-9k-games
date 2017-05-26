@@ -18,10 +18,18 @@ var plataformas = document.querySelectorAll('.tematica');
 // Selecciona el select con la juego
 var juego = document.querySelector('#juego');
 
+// Selecciona el mensaje
+var mensaje = document.querySelector('#mensaje');
+
 // Selecciona el botón de envío
 var enviar = document.querySelector('#enviar');
 
+// Selecciona el botón de borrar
 var borrar = document.querySelector('#reset');
+
+// Selecciona el botón de avanzar en el formulario
+
+var labelSiguiente = document.querySelector('#label-siguiente');
 
 // Recorre las fichas y añade una opción al select con los títulos
 for (var i = 0; i < fichas.length; i++) {
@@ -32,22 +40,19 @@ for (var i = 0; i < fichas.length; i++) {
  *  EVENTOS  *
  *************/
 
-// Añade un Event Listener 'keyup' que llama a la función para comprobar los campos imprescindibles
+// Añade un Event Listener 'keyup' y 'change' que llama a la función para comprobar los campos imprescindibles
 for (var i = 0; i < imprescindibles.length; i++) {
-    imprescindibles[i].addEventListener('keyup', function () { comprobarImprescindible(this); });
+    imprescindibles[i].addEventListener('keyup', function () { comprobarEnviar() });
+    imprescindibles[i].addEventListener('change', function () { comprobarEnviar() });
 }
 
-nombre.addEventListener('keyup', function() { comprobarNombre(); });
+nombre.addEventListener('keyup', function () { comprobarNombre(); });
 
-email.addEventListener('keyup', function() { comprobarEmail(); });
+email.addEventListener('keyup', function () { comprobarEmail(); });
 
 novedades.addEventListener('click', function () { comprobarNovedades(); });
 
-for (var i = 0; i < plataformas.length; i++) {
-    plataformas[i].addEventListener('click', function () { comprobarplataformas(); });
-}
-
-juego.addEventListener('change', function () { comprobarjuego(); });
+juego.addEventListener('change', function () { comprobarJuego(); });
 
 borrar.addEventListener('click', function () { borrarFormulario(); });
 
@@ -56,72 +61,55 @@ borrar.addEventListener('click', function () { borrarFormulario(); });
  *  FUNCIONES  *
  ***************/
 
-// Comprueba que todos los campos imprescindibles tienen una longitud mayor que 3
-/*function comprobarImprescindible(campo) {
-    if (campo.value.length < 5) {
-        campo.focus();
-
-        campo.style.backgroundColor = 'lightcoral';
-
-        campo.nextElementSibling.setAttribute('class', 'icon-cross');
-        campo.nextElementSibling.textContent = "El campo debe tener más de 5 caracteres";
-    } else {
-        campo.style.backgroundColor = 'lightgreen';
-        campo.nextElementSibling.setAttribute('class', 'icon-checkmark');
-        campo.nextElementSibling.textContent = "";
-    }
-}*/
-
-
-var nombreCorrecto = false;
-
+// Valida que el nombre tenga más de 3 caracteres
 function comprobarNombre() {
-    nombreCorrecto = false;
-
     if (nombre.value.length === 0) {
         nombre.style.backgroundColor = 'white';
+        
+        return false;
     } else if (nombre.value.length < 3) {
         nombre.focus();
 
         nombre.style.backgroundColor = 'lightcoral';
 
-        nombre.nextElementSibling.setAttribute('class', 'icon-cross');
         nombre.nextElementSibling.textContent = "El nombre debe tener más de 3 caracteres";
-    } else {
-        nombreCorrecto = true;
 
-        nombre.style.backgroundColor = 'lightgreen';
-        nombre.nextElementSibling.setAttribute('class', 'icon-checkmark');
-        nombre.nextElementSibling.textContent = "";
+        return false;
     }
 
-    comprobarEnviar();
+    nombre.style.backgroundColor = 'lightgreen';
+    nombre.nextElementSibling.textContent = "";
+
+
+    return true;
 }
 
-var emailCorrecto = false;
 
+// Valida que el email sea una dirección válida con una expresión regular
 function comprobarEmail() {
-    emailCorrecto = false;
+    if (email.value.length === 0) {
+        email.style.backgroundColor = 'white';
 
-    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))  {
+        return false;
+    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
         email.focus();
 
         email.style.backgroundColor = 'lightcoral';
 
-        email.nextElementSibling.setAttribute('class', 'icon-cross');
         email.nextElementSibling.textContent = "La dirección no es válida";
-    } else {
-        emailCorrecto = true;
 
-        email.style.backgroundColor = 'lightgreen';
-        email.nextElementSibling.setAttribute('class', 'icon-checkmark');
-        email.nextElementSibling.textContent = "";
+        return false;
     }
 
-    comprobarEnviar();
+    email.style.backgroundColor = 'lightgreen';
+    email.nextElementSibling.textContent = "";
+
+
+    return true;
 }
 
 
+// Comprueba si el checkbox de novedades ha sido marcado
 function comprobarNovedades() {
     var mensajeNovedades = document.querySelector('.mensaje-novedades');
 
@@ -134,19 +122,52 @@ function comprobarNovedades() {
 
 
 
+// Comprueba si se ha elegido un juego y muestra y oculta el textarea
+function comprobarJuego() {
+    if (juego.value === "") {
+        mensaje.value = "";
+        
+        mensaje.style.visibility = "hidden";
+        mensaje.previousElementSibling.style.visibility = "hidden";
+
+        return false;
+    }
+
+    mensaje.style.visibility = "visible";
+    mensaje.previousElementSibling.style.visibility = "visible";
+
+    return true;
+}
+
+
+// Comprueba que el mensaje no esté vacío
+function comprobarMensaje() {
+    if (mensaje.value === "") {
+        return false;
+    }
+
+    return true;
+}
+
+
+// Devuelve el css al estado original
 function borrarFormulario() {
     for (var i = 0; i < imprescindibles.length; i++) {
         imprescindibles[i].value = "";
         imprescindibles[i].style.backgroundColor = 'white';
-        imprescindibles[i].nextElementSibling.setAttribute('class', '');
         imprescindibles[i].nextElementSibling.textContent = "";
+        mensaje.style.visibility = "hidden";
+        mensaje.previousElementSibling.style.visibility = "hidden";
+        enviar.disabled = true;
     }
 }
 
+
+// Comprueba que todos los campos requeridos sean válidos
 function comprobarEnviar() {
-    if (!nombreCorrecto || !emailCorrecto) {
-        enviar.disabled = true;
-    } else {
+    if (comprobarNombre() && comprobarEmail() && comprobarJuego() && comprobarMensaje()) {
         enviar.disabled = false;
+    } else {
+        enviar.disabled = true;
     }
 }
