@@ -32,41 +32,55 @@
   <!-- Ficha -->
   <div id="ficha" class="ficha">
     <div class="fondo-ficha">
-      <!-- Título -->
+
+      <!-- Cabecera -->
       <header class="titulo-ficha">
         <div>
           <h3></h3>
           <span class="iconos-plataformas"></span>
         </div>
       </header>
+      <!-- Fin cabecera -->
+
       <!-- Contenido -->
       <div class="contenido-ficha">
+
         <!-- Columna izquierda -->
         <div class="contenido-ficha-izq">
           <img class="portada-ficha" src="">
           <input type="button" id="boton-cerrar" class="boton-ficha cerrar" value="cerrar">
         </div>
+        <!-- Fin columna izquierda -->
+
         <!-- Columna derecha -->
         <div class="contenido-ficha-dcha">
           <div class="datos-ficha">
-            <div class="dato">
-              <span>Desarrollador: </span>
-              <span id="desarrollador"></span>
+            <div class="arriba-izquierda">
+              <div class="dato">
+                <span>Desarrollador: </span>
+                <span id="desarrollador"></span>
+              </div>
+              <div class="dato">
+                <span>Genero: </span>
+                <span id="genero"></span>
+              </div>
+              <div class="dato">
+                <span>Precio: </span>
+                <span id="precio"></span>
+              </div>
+              <div class="dato">
+                <span>Fecha de lanzamiento: </span>
+                <span id="fecha-lanzamiento"></span>
+              </div>
             </div>
-            <div class="dato">
-              <span>Genero: </span>
-              <span id="genero"></span>
-            </div>
-            <div class="dato">
-              <span>Precio: </span>
-              <span id="precio"></span>
-            </div>
-            <div class="dato">
-              <span>Fecha de lanzamiento: </span>
-              <span id="fecha-lanzamiento"></span>
-            </div>
-            <img class="pegi">
+            <div class="arriba-derecha">
+              <div class="nota">
+                <div class="texto-nota">Nota</div>
+                <div id="puntuacion" class="puntuacion">6</div>
+              </div>
+              <img class="pegi">
 
+            </div>
             <hr class="divisor-ficha">
 
             <div id="descripcion" class="descripcion">
@@ -78,41 +92,51 @@
             </div>
           </div>
         </div>
+        <!-- Fin columna derecha -->
       </div>
     </div>
   </div>
+  <!-- Fin ficha -->
 
   <main>
+
+    <!-- Cabecera -->
     <header class="cabecera">
       <div class="titulo-principal">
         <h1>Over 9k Games!</h1>
         <div class="subtitulo">Opiniones desenfadadas</div>
       </div>
+
+      <!-- Menu -->
       <nav class="menu">
         <ul clasS="menu-principal">
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="#">+ info</a>
+          <li><a>+ info</a>
             <ul class="submenu">
-              <li><a href="#">hola</a></li>
-              <li><a href="#">q ase</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
             </ul>
           </li>
-          <li><a href="#">Opiniones</a>
+          <li><a>Opiniones</a>
             <ul class="submenu">
-              <li><a href="#">Indies</a></li>
-              <li><a href="#">Comerciales</a></li>
+              <li><a href="opiniones.html">Opiniones</a></li>
+              <li><a href="noticias.html">Noticias</a></li>
             </ul>
           </li>
         </ul>
-        <input list="juegos" class="buscador" placeholder="Buscar...">
-        <datalist id="juegos">
-          <option value="Tiny and Big">
-            <option value="Rocket League">
-              <option value="Doom">
+
+        <!-- Buscador -->
+        <input list="juegos-buscador" class="buscador" placeholder="Buscar...">
+        <datalist id="juegos-buscador">
         </datalist>
+        <!-- Fin buscador -->
       </nav>
+      <!-- Fin menu -->
     </header>
+    <!-- Fin cabecera -->
+
     <hr>
+
     <article class="opinion">
       <section>
         <h1 class="titulo-opinion">Life is Strange</h1>
@@ -122,22 +146,9 @@
         <input type="button" id="life-strange" class="boton-ficha abrir" value="ver ficha">
 
         <p>
-          Tiny and Big: Grandpa’s Leftovers es un juego indie desarrollado por Black Pants. Ser un juego indie significa que ha sido
-          hecho por un estudio de videojuegos independiente, normalmente formado por pocas personas o incluso un único individuo.
-          Estos peculiares estudios o individuos no reciben financiación de distribuidoras más grandes, asi que lanzan sus
-          juegos digitalmente gracias a plataformas como Steam, PlayStation Network o Xbox Live. Generalmente, los juegos
-          indie son "más pequeños" que los juegos convencionales, pero también son más innovadores. A menudo no presentan
-          gráficos a la última debido a la falta de financiación externa, asi que apuestan por la experimentación creativa
-          y artística, siendo una jugabilidad divertida uno de sus puntos fuertes.
-        </p>
-        <p>
-          La mayoría de los juegos de los que os traeré opiniones serán, sin duda, juegos indie. Estos últimos años me he encontrado
-          disfrutando estos juegos mucho más que juegos "comerciales". Por lo tanto, me he convertido en un gran fan de ellos.
-          Llámadme hipster.
-        </p>
-        <p>
-          Si, me he dado cuenta de que estoy mareando mucho la perdíz... pero supongo que era una buena idea aclarar brevemente qué
-          son los juegos indie.
+          Life Is Strange es un juego de aventuras episódico desarrollado por DONTNOD Entertainment y publicado por Square Enix. Lo
+          forman 5 episodios que fueron lanzados a lo largo de 2015, al más puro estilo de serie de televisión. Ha vendido
+          más de 3 millones de copias y ha recibido una gran cantidad de premios. Veamos de lo que estamos hablando.
         </p>
 
         <div class="media">
@@ -145,43 +156,68 @@
         </div>
 
         <section>
-          <h1 class="titulo-apartado">Mi opinión</h1>
+          <h1 class="titulo-apartado">Introducción</h1>
           <p>
-            Tiny and Big! ¡Qué locura de juego! Cuando empezamos a jugarlo, rápidamente encontramos unos gráficos cartoon muy agradables
-            y coloridos (típicos de comics dibujados a mano) mostrándonos a Tiny conduciendo un coche a traves del desierto.
-            Este escenario se aprovecha para decirnos porque estamos embarcando en esta aventura. Tiny habla por la radio
-            con alguien sobre su último problema. Cuando su abuelo murió, le dejó sus más que usados calzones como herencia.
-            Si, estoy hablando de su apestosa ropa interior. De alguna forma, no quiero saber como, Tiny hizó de ellos su
-            más valioso y adorado tesoro, pero algo horrible ocurrió. ¡Fueron robados por Big! Nuestro deber es ayudar a
-            Tiny a recuperar lo que su adorable abuelo le dejó en su lecho de muerte. A lo mejor esos calzoncillos no son
-            meros calzoncillos.
+            Life is Strange narra la historia de una chica adolescente llamada Maxine "Max" Caulfield, que está estudiando fotografía
+            en la academia Blackwell, de Arcadia Bay. La historia comienza en su clase de fotografía, donde Max visualiza
+            una extraña visión de un faro siendo destrozado por un tornado, y de repente vuelve a la clase y le hace rayarse.
+            Despues de la clase, se dirige al baño para despejar la cabeza un poco después de todo lo ocurrido.
+          </p>
+          <p>
+            Una mariposa azul entra al baño y Max decide sacarle una foto. Después de la foto, alguien entra al baño por lo que Max se
+            esconde en uno de los retretes. Una chica con el pelo azul entra junto a un chico llamado Nathan Prescott y empiezan
+            a discutir sobre algo. De la nada, Nathan saca una pistola y mata a la chica. Max ve a Nathan presionar el gatillo
+            y a la chica cayendo al suelo con sangre en su ropa. De repente desarrolla la habilidad de volver atrás en el
+            tiempo. Rebovina justo antes de que entren al baño y aprovecha el tiempo para pensar como salvar a la chica,
+            que resulta ser Chloe, una amiga de la infancia.
+
           </p>
         </section>
         <section>
-          <h1 class="titulo-apartado">Mi opinión</h1>
+          <h1 class="titulo-apartado">Parece que esto empieza fuerte</h1>
           <p>
-            Tiny and Big! ¡Qué locura de juego! Cuando empezamos a jugarlo, rápidamente encontramos unos gráficos cartoon muy agradables
-            y coloridos (típicos de comics dibujados a mano) mostrándonos a Tiny conduciendo un coche a traves del desierto.
-            Este escenario se aprovecha para decirnos porque estamos embarcando en esta aventura. Tiny habla por la radio
-            con alguien sobre su último problema. Cuando su abuelo murió, le dejó sus más que usados calzones como herencia.
-            Si, estoy hablando de su apestosa ropa interior. De alguna forma, no quiero saber como, Tiny hizó de ellos su
-            más valioso y adorado tesoro, pero algo horrible ocurrió. ¡Fueron robados por Big! Nuestro deber es ayudar a
-            Tiny a recuperar lo que su adorable abuelo le dejó en su lecho de muerte. A lo mejor esos calzoncillos no son
-            meros calzoncillos.
+            Todo esto ocurre al principio. Tantas preguntas... ¿que significa la visión del tornado? ¿Por qué Nathan disparó a Chloe?
+            ¿Sobre qué era la pelea? ¿Cómo puede Max viajar en el tiempo?
+          </p>
+          <p>
+            El juego está hecho de maravilla y la atmosfera es increíble. El argumento es una auténtica pasada, capaz de mantenerte enganchado
+            de principio a fin. Es el típico argumento de película que juega con tu cerebro y tus sentimientos, dejándote
+            siempre en suspense de una forma que otros juegos no consiguen. Cada nuevo episodio, el juego mejora.
+          </p>
+        </section>
+
+        <section>
+          <h1 class="titulo-apartado">¿Pero cómo se juega?</h1>
+          <p>
+            Es un juego en el que la narrativa cobra la mayor importancia. Pone enfasis en las elecciones y las consecuencias en vez
+            de una jugabilidad más convencional. Es una especie de híbrido entre una serie de televisión y un videojuego.
+          </p>
+          <p>
+            Puedes interactuar con objetos, explorar los escenarios y hablar con los personajes para conocer más sobre el mundo del juego
+            y tratar de resolver los misterios y puzzles. La mecánica de volver atrás en el tiempo te permite hacer y deshacer
+            situaciones a tu antojo. Puedes recoger objetos del "futuro" y traerlos al "presente" para resolver puzzles.
           </p>
         </section>
         <section>
-          <h1 class="titulo-apartado">Mi opinión</h1>
+          <h1 class="titulo-apartado">La duración...</h1>
           <p>
-            Tiny and Big! ¡Qué locura de juego! Cuando empezamos a jugarlo, rápidamente encontramos unos gráficos cartoon muy agradables
-            y coloridos (típicos de comics dibujados a mano) mostrándonos a Tiny conduciendo un coche a traves del desierto.
-            Este escenario se aprovecha para decirnos porque estamos embarcando en esta aventura. Tiny habla por la radio
-            con alguien sobre su último problema. Cuando su abuelo murió, le dejó sus más que usados calzones como herencia.
-            Si, estoy hablando de su apestosa ropa interior. De alguna forma, no quiero saber como, Tiny hizó de ellos su
-            más valioso y adorado tesoro, pero algo horrible ocurrió. ¡Fueron robados por Big! Nuestro deber es ayudar a
-            Tiny a recuperar lo que su adorable abuelo le dejó en su lecho de muerte. A lo mejor esos calzoncillos no son
-            meros calzoncillos.
+            Tristemente, el juego no dura demasiado. Se pasa fácilmente en menos de 3 horas de juego, pero es altamente rejugable debido
+            a la cantidad de logros desbloqueables que ofrece. De todas formas, resulta una experiencia muy disfrutable,
+            llena de bromas y situaciones inesperadas que pueden hacerte soltar más de una carcajada.
           </p>
+        </section>
+        <section class="mi-opinion">
+          <h1 class="titulo-apartado">Mi opinión</h1>
+          <div class="texto-mi-opinion">
+            <p>
+              Definitivamente recomiendo probar este juego. Es diferente, fresco y puede hacerte pasar un buen rato.
+            </p>
+            <p>
+              No es ninguna obra maestra ni un juego que recordarás con cariño, pero al jugarlo puedes ver el cariño con el que lo han
+              hecho sus desarrolladores y valorar su originalidad. Su punto fuerte para mí es, sin duda, su banda sonora.
+              Recomiendo echarle un ojo, es muy disfrutable.
+            </p>
+          </div>
         </section>
       </section>
     </article>
@@ -189,6 +225,7 @@
   <script src="js/menu.js"></script>
   <script src="js/fichas.js"></script>
   <script src="js/ficha.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
