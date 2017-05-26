@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Over 9k Games</title>
+
+    <meta charset="utf-8">
+
+    <base>
+
+    <script>
+        var ruta = location.pathname;
+        ruta = ruta.substring(0, ruta.indexOf('opiniones'));
+
+        document.querySelector('base').href = ruta;
+    </script>
+
+    <link rel="icon" href="img/9k.ico">
+
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/ficha.css">
+    <link rel="stylesheet" type="text/css" href="css/simple-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/opinion.css">
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/simple-scrollbar.min.js"></script>
+</head>
+
+<body>
+    <!-- Ficha -->
+    <div id="ficha" class="ficha">
+        <div class="fondo-ficha">
+
+            <!-- Cabecera -->
+            <header class="titulo-ficha">
+                <div>
+                    <h3></h3>
+                    <span class="iconos-plataformas">
+          </span>
+                </div>
+            </header>
+            <!-- Fin cabecera -->
+
+            <!-- Contenido -->
+            <div class="contenido-ficha">
+                <div class="contenedor-relativo">
+                    <div class="contenedor-ampliable">
+                        <span class="cerrar-imagen">X</span>
+                    </div>
+                </div>
+                <!-- Columna izquierda -->
+                <div class="contenido-ficha-izq">
+                    <img class="portada-ficha" src="">
+
+                    <a href="#" id="boton-leer" class="boton-ficha leer">Leer</a>
+
+                    <input type="button" id="boton-cerrar" class="boton-ficha cerrar" value="cerrar">
+                </div>
+                <!-- Fin columna izquierda -->
+
+                <!-- Columna derecha -->
+                <div class="contenido-ficha-dcha">
+
+                    <div class="datos-ficha">
+                        <div class="arriba-izquierda">
+                            <div class="dato">
+                                <span>Desarrollador: </span>
+                                <span id="desarrollador"></span>
+                            </div>
+                            <div class="dato">
+                                <span>Genero: </span>
+                                <span id="genero"></span>
+                            </div>
+                            <div class="dato">
+                                <span>Precio: </span>
+                                <span id="precio"></span>
+                            </div>
+                            <div class="dato">
+                                <span>Fecha de lanzamiento: </span>
+                                <span id="fecha-lanzamiento"></span>
+                            </div>
+                        </div>
+                        <div class="arriba-derecha">
+                            <div class="nota">
+                                <div class="texto-nota">Nota</div>
+                                <div id="puntuacion" class="puntuacion">6</div>
+                            </div>
+                            <img class="pegi">
+
+                        </div>
+                        <hr class="divisor-ficha">
+
+                        <div id="descripcion" class="descripcion">
+                        </div>
+
+                        <hr class="divisor-ficha">
+
+                        <div id="miniaturas" class="miniaturas">
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Fin columna derecha -->
+            </div>
+        </div>
+    </div>
+    <!-- Fin ficha -->
+    <main>
+
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="titulo-principal">
+                <h1>Over 9k Games!</h1>
+                <div class="subtitulo">Opiniones desenfadadas</div>
+            </div>
+
+            <!-- Menu -->
+            <nav class="menu">
+                <ul clasS="menu-principal">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a>+ info</a>
+                        <ul class="submenu">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Opiniones</a>
+                        <ul class="submenu">
+                            <li><a href="opiniones.html">Opiniones</a></li>
+                            <li><a href="noticias.html">Noticias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Buscador -->
+                <input list="juegos-buscador" class="buscador" placeholder="Buscar...">
+                <datalist id="juegos-buscador">
+                </datalist>
+                <!-- Fin buscador -->
+            </nav>
+            <!-- Fin menu -->
+        </header>
+        <!-- Fin cabecera -->
+
+        <hr>
+
+        <article class="opinion">
+            <section>
+                <h1>Aun no hay noticias disponibles</h1>
+            </section>
+        </article>
+    </main>
+    <script src="js/menu.js"></script>
+    <script src="js/fichas.js"></script>
+    <script src="js/ficha.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
