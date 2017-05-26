@@ -5,6 +5,9 @@ SimpleScrollbar.initEl(contenidoFichaDcha);
 /* Indica si la imagen del slider ha sido clicada. Se usa para la ficha */
 var clicked = false;
 
+/* Nota de la ficha */
+var puntuacion = document.querySelector("#puntuacion");
+
 
 /* EVENTOS PARA HOVER */
 $(".imagen-juego").hover(function () {
@@ -114,8 +117,21 @@ function abrirFicha(elemento, i) {
 
     /* Recorre el array de miniaturas de la ficha y adjunta sus imagenes a la ficha */
     for (var j = 0; j < fichas[i]["miniaturas"].length; j++) {
-        $("#miniaturas").append('<img src="' + fichas[i]["miniaturas"][j] + '">');
+        $("#miniaturas").append('<img class="miniatura" src="' + fichas[i]["miniaturas"][j] + '">');
     }
+
+    /* Abre y cierra las imágenes */
+    $(".miniatura").click(function () {
+        var miniaturaAAmpliar = $(this).attr("src");
+        $(".contenedor-ampliable").append('<img class="ampliable" src="' + miniaturaAAmpliar + '">');
+        $(".contenedor-relativo").slideDown("fast");
+
+        /* Cierra la imagen */
+        $(".cerrar-imagen").click(function () {
+            $(".contenedor-relativo").slideUp("fast");
+        });
+    });
+
 
     $("#boton-leer").attr("href", fichas[i]["opinion"]);
 }
@@ -157,5 +173,5 @@ $("#boton-leer").click(function () {
     }
 });
 
-var puntuacion = document.querySelector("#puntuacion");
+
 
