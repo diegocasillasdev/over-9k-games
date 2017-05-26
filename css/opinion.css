@@ -48,7 +48,8 @@
 }
 
 .media {
-    height: 360px;
+    width: 560px;
+    height: 315px;
     margin: 60px auto;
     border: 2px solid white;
     text-align: center;

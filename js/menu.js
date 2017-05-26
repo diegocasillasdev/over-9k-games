@@ -9,8 +9,3 @@ $(".menu-principal > li").hover(function () {
     $(this).children(".submenu").slideUp("fast");
 });
 
-
-$(".menu-principal > li").click(function () {
-    $(this).children(".submenu").slideToggle("fast");
-});
-

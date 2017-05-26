@@ -19,13 +19,13 @@
 
 .ss-scroll {
   position: relative;
-  background: #00A376;
-  width: 5px;
+  background: white;
+  width: 7px;
   border-radius: 4px;
   top: 0;
   z-index: 2;
   cursor: pointer;
-  opacity: 0;
+  opacity: 0.6;
   transition: opacity 0.25s linear;
 }
 
@@ -34,6 +34,7 @@
 }
 
 .ss-container:hover .ss-scroll {
+  background: #00A376;
   opacity: 1;
 }
 
