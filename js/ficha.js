@@ -94,11 +94,11 @@ function abrirFicha(elemento, i) {
     $("#puntuacion").text(fichas[i]["puntuacion"]);
 
     if (fichas[i]["puntuacion"] < 5) {
-        $("#puntuacion").css({ "background-color": "red" });
+        $("#puntuacion").css({ "background-color": "lightcoral" });
     } else if (fichas[i]["puntuacion"] >= 5 && fichas[i]["puntuacion"] <= 6) {
         $("#puntuacion").css({ "background-color": "orange" });
     } else {
-        $("#puntuacion").css({ "background-color": "green" });
+        $("#puntuacion").css({ "background-color": "#009A76" });
     }
 
     $(".pegi").attr("src", fichas[i]["pegi"]);

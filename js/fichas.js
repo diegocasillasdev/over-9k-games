@@ -34,6 +34,7 @@ var fichas = [
             "img/xbox.ico"
         ],
         portada: "img/life-strangecaratula.jpg",
+        puntuacion: "9",
         pegi: "img/16.gif",
         desarrollador: "DONTNOD Entertainment",
         genero: "Aventura",
@@ -66,6 +67,7 @@ var fichas = [
             "img/xbox.ico"
         ],
         portada: "img/doomcaratula.jpg",
+        puntuacion: "9",
         pegi: "img/18.gif",
         desarrollador: "Id Software",
         genero: "First Person Shooter",
@@ -127,6 +129,7 @@ var fichas = [
             "img/xbox.ico"
         ],
         portada: "img/rocketcaratula.jpg",
+        puntuacion: "8",
         pegi: "img/3.gif",
         desarrollador: "Psyonix",
         genero: "Carreras, Deportes, Arcade",
