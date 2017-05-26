@@ -62,12 +62,19 @@
         height: 30px;
         transition: width 300ms ease;
         text-align: center;
-        margin: 2% 0;
+        margin: 2%;
 }
 
 .campo input[type=text],
 .campo input[type=email] {
     width: 30%;
+}
+
+.campo input[type=radio],
+.campo input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    margin: 0 2%;
 }
 
 .campo input:hover,
@@ -157,6 +164,9 @@
   background-color: #00A376;
 }
 
+#enviar:disabled {
+    background-color: gray;
+}
 
 /**********
  * SLIDER *
@@ -181,7 +191,6 @@
 }
 
 /* Movimiento del slider */
-
 #atras:checked ~ .contenedor-slider-formulario > .contenido-formulario {
   margin-left: 0;
 }
@@ -195,6 +204,8 @@
     display: none;
 }
 
+
+/* Botones slider */
 .boton-slider {
     position: absolute;
     top: 50%;
@@ -208,8 +219,6 @@
 .boton-slider span:hover {
     color: #009A76;
 }
-
-
 
 .siguiente {
     right: 20px;

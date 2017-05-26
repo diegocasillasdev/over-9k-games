@@ -1,8 +1,8 @@
-/* Activa la barra de scroll para la columna derecha de la ficha */
+// Activa la barra de scroll para la columna derecha de la ficha (https://github.com/buzinas/simple-scrollbar)
 var contenidoFichaDcha = document.querySelector('.contenido-ficha-dcha');
 SimpleScrollbar.initEl(contenidoFichaDcha);
 
-/* Indica si la imagen del slider ha sido clicada */
+/* Indica si la imagen del slider ha sido clicada. Se usa para la ficha */
 var clicked = false;
 
 
@@ -71,6 +71,7 @@ $(".imagen-juego, .abrir").click(function () {
         }
     }
 });
+
 
 
 function abrirFicha(elemento, i) {

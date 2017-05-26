@@ -72,9 +72,12 @@ borrar.addEventListener('click', function () { borrarFormulario(); });
     }
 }*/
 
+
 var nombreCorrecto = false;
 
 function comprobarNombre() {
+    nombreCorrecto = false;
+
     if (nombre.value.length === 0) {
         nombre.style.backgroundColor = 'white';
     } else if (nombre.value.length < 3) {
@@ -86,14 +89,20 @@ function comprobarNombre() {
         nombre.nextElementSibling.textContent = "El nombre debe tener más de 3 caracteres";
     } else {
         nombreCorrecto = true;
-        
+
         nombre.style.backgroundColor = 'lightgreen';
         nombre.nextElementSibling.setAttribute('class', 'icon-checkmark');
         nombre.nextElementSibling.textContent = "";
     }
+
+    comprobarEnviar();
 }
 
+var emailCorrecto = false;
+
 function comprobarEmail() {
+    emailCorrecto = false;
+
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))  {
         email.focus();
 
@@ -102,10 +111,14 @@ function comprobarEmail() {
         email.nextElementSibling.setAttribute('class', 'icon-cross');
         email.nextElementSibling.textContent = "La dirección no es válida";
     } else {
+        emailCorrecto = true;
+
         email.style.backgroundColor = 'lightgreen';
         email.nextElementSibling.setAttribute('class', 'icon-checkmark');
         email.nextElementSibling.textContent = "";
     }
+
+    comprobarEnviar();
 }
 
 
@@ -127,5 +140,13 @@ function borrarFormulario() {
         imprescindibles[i].style.backgroundColor = 'white';
         imprescindibles[i].nextElementSibling.setAttribute('class', '');
         imprescindibles[i].nextElementSibling.textContent = "";
+    }
+}
+
+function comprobarEnviar() {
+    if (!nombreCorrecto || !emailCorrecto) {
+        enviar.disabled = true;
+    } else {
+        enviar.disabled = false;
     }
 }

@@ -18,7 +18,8 @@
   <!-- Ficha -->
   <div id="ficha" class="ficha">
     <div class="fondo-ficha">
-      <!-- Título -->
+
+      <!-- Cabecera -->
       <header class="titulo-ficha">
         <div>
           <h3></h3>
@@ -26,8 +27,11 @@
           </span>
         </div>
       </header>
+      <!-- Fin cabecera -->
+
       <!-- Contenido -->
       <div class="contenido-ficha">
+
         <!-- Columna izquierda -->
         <div class="contenido-ficha-izq">
           <img class="portada-ficha" src="">
@@ -36,6 +40,8 @@
 
           <input type="button" id="boton-cerrar" class="boton-ficha cerrar" value="cerrar">
         </div>
+        <!-- Fin columna izquierda -->
+
         <!-- Columna derecha -->
         <div class="contenido-ficha-dcha">
           <div class="datos-ficha">
@@ -58,7 +64,7 @@
             <img class="pegi">
 
             <hr class="divisor-ficha">
-
+            
             <div id="descripcion" class="descripcion">
             </div>
 
@@ -68,17 +74,23 @@
             </div>
           </div>
         </div>
+        <!-- Fin columna derecha -->
       </div>
     </div>
   </div>
+  <!-- Fin ficha -->
 
   <main>
     <div class="centrar-todo">
+
+      <!-- Cabecera -->
       <header class="cabecera">
         <div class="titulo-principal">
           <h1>Over 9k Games!</h1>
           <div class="subtitulo">Opiniones desenfadadas</div>
         </div>
+
+        <!-- Menu -->
         <nav class="menu">
           <ul clasS="menu-principal">
             <li><a href="index.html">Inicio</a></li>
@@ -95,15 +107,26 @@
               </ul>
             </li>
           </ul>
+
+          <!-- Buscador -->
           <input list="juegos-buscador" class="buscador" placeholder="Buscar...">
           <datalist id="juegos-buscador">
           </datalist>
+          <!-- Fin buscador -->
         </nav>
+        <!-- Fin menu -->
       </header>
+      <!-- Fin cabecera -->
+
       <hr>
+
       <section class="portada">
+
+        <!-- Slider -->
         <div class="contenedor">
           <div class="caja">
+
+            <!-- Elementos slider -->
             <div class="elemento-slider">
               <article class="imagen-texto">
                 <img id="life-strange" class="imagen-juego" src="img/life-strange.jpg" alt="Life is Strange">
@@ -128,11 +151,14 @@
                 <h2><span>Rocket League</span></h2>
               </article>
             </div>
+            <!-- Fin elementos slider -->
           </div>
         </div>
+        <!-- Fin slider -->
       </section>
     </div>
   </main>
+
   <script src="js/menu.js"></script>
   <script src="js/fichas.js"></script>
   <script src="js/ficha.js"></script>

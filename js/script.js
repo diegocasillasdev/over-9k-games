@@ -1,3 +1,4 @@
+// Sustituye la barra de overflow: auto (https://github.com/buzinas/simple-scrollbar)
 var main = document.querySelector('main');
 SimpleScrollbar.initEl(main);
 
