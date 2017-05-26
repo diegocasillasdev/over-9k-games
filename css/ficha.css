@@ -92,6 +92,7 @@
   height: 100%;
 
   padding: 1%;
+  border-right: 1px solid white;
 }
 
 .portada-ficha {
@@ -144,14 +145,14 @@
  ********************/
 
 .contenido-ficha-dcha {
-  padding-bottom: 2%;
+  padding: 2% 0;
   position: absolute;
   display: inline-block;
   margin: 0;
   width: 62%;
   height: 80%;
-  border-left: 1px solid white;
-  padding-top: 18px;
+  
+
   
 }
 
@@ -192,6 +193,7 @@
   width: 100%;
 
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .miniaturas img {
