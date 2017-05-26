@@ -28,44 +28,63 @@
 </head>
 
 <body>
+
   <!-- Ficha -->
   <div id="ficha" class="ficha">
     <div class="fondo-ficha">
-      <!-- Título -->
+
+      <!-- Cabecera -->
       <header class="titulo-ficha">
         <div>
           <h3></h3>
           <span class="iconos-plataformas"></span>
         </div>
       </header>
+      <!-- Fin cabecera -->
+
       <!-- Contenido -->
       <div class="contenido-ficha">
+        <div class="contenedor-relativo">
+          <div class="contenedor-ampliable">
+            <span class="cerrar-imagen">X</span>
+          </div>
+        </div>
         <!-- Columna izquierda -->
         <div class="contenido-ficha-izq">
           <img class="portada-ficha" src="">
           <input type="button" id="boton-cerrar" class="boton-ficha cerrar" value="cerrar">
         </div>
+        <!-- Fin columna izquierda -->
+
         <!-- Columna derecha -->
         <div class="contenido-ficha-dcha">
           <div class="datos-ficha">
-            <div class="dato">
-              <span>Desarrollador: </span>
-              <span id="desarrollador"></span>
+            <div class="arriba-izquierda">
+              <div class="dato">
+                <span>Desarrollador: </span>
+                <span id="desarrollador"></span>
+              </div>
+              <div class="dato">
+                <span>Genero: </span>
+                <span id="genero"></span>
+              </div>
+              <div class="dato">
+                <span>Precio: </span>
+                <span id="precio"></span>
+              </div>
+              <div class="dato">
+                <span>Fecha de lanzamiento: </span>
+                <span id="fecha-lanzamiento"></span>
+              </div>
             </div>
-            <div class="dato">
-              <span>Genero: </span>
-              <span id="genero"></span>
-            </div>
-            <div class="dato">
-              <span>Precio: </span>
-              <span id="precio"></span>
-            </div>
-            <div class="dato">
-              <span>Fecha de lanzamiento: </span>
-              <span id="fecha-lanzamiento"></span>
-            </div>
-            <img class="pegi">
+            <div class="arriba-derecha">
+              <div class="nota">
+                <div class="texto-nota">Nota</div>
+                <div id="puntuacion" class="puntuacion">6</div>
+              </div>
+              <img class="pegi">
 
+            </div>
             <hr class="divisor-ficha">
 
             <div id="descripcion" class="descripcion">
@@ -77,41 +96,51 @@
             </div>
           </div>
         </div>
+        <!-- Fin columna derecha -->
       </div>
     </div>
   </div>
+  <!-- Fin ficha -->
 
   <main>
+
+    <!-- Cabecera -->
     <header class="cabecera">
       <div class="titulo-principal">
         <h1>Over 9k Games!</h1>
         <div class="subtitulo">Opiniones desenfadadas</div>
       </div>
+
+      <!-- Menu -->
       <nav class="menu">
         <ul clasS="menu-principal">
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="#">+ info</a>
+          <li><a>+ info</a>
             <ul class="submenu">
-              <li><a href="#">hola</a></li>
-              <li><a href="#">q ase</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
             </ul>
           </li>
-          <li><a href="#">Opiniones</a>
+          <li><a>Opiniones</a>
             <ul class="submenu">
-              <li><a href="#">Indies</a></li>
-              <li><a href="#">Comerciales</a></li>
+              <li><a href="opiniones.html">Opiniones</a></li>
+              <li><a href="noticias.html">Noticias</a></li>
             </ul>
           </li>
         </ul>
-        <input list="juegos" class="buscador" placeholder="Buscar...">
-        <datalist id="juegos">
-          <option value="Tiny and Big">
-            <option value="Rocket League">
-              <option value="Doom">
+
+        <!-- Buscador -->
+        <input list="juegos-buscador" class="buscador" placeholder="Buscar...">
+        <datalist id="juegos-buscador">
         </datalist>
+        <!-- Fin buscador -->
       </nav>
+      <!-- Fin menu -->
     </header>
+    <!-- Fin cabecera -->
+
     <hr>
+
     <article class="opinion">
       <section>
         <h1 class="titulo-opinion">Rocket League</h1>
@@ -144,7 +173,7 @@
         </div>
 
         <section>
-          <h1 class="titulo-apartado">Mi opinión</h1>
+          <h1 class="titulo-apartado">Introducción</h1>
           <p>
             Tiny and Big! ¡Qué locura de juego! Cuando empezamos a jugarlo, rápidamente encontramos unos gráficos cartoon muy agradables
             y coloridos (típicos de comics dibujados a mano) mostrándonos a Tiny conduciendo un coche a traves del desierto.
@@ -156,31 +185,60 @@
             meros calzoncillos.
           </p>
         </section>
+        <img class="imagen-opinion" src="img/rocket-img1.jpg" alt="Rocket League">
         <section>
-          <h1 class="titulo-apartado">Mi opinión</h1>
+          <h1 class="titulo-apartado">¿Pero esto de qué va?</h1>
           <p>
-            Tiny and Big! ¡Qué locura de juego! Cuando empezamos a jugarlo, rápidamente encontramos unos gráficos cartoon muy agradables
-            y coloridos (típicos de comics dibujados a mano) mostrándonos a Tiny conduciendo un coche a traves del desierto.
-            Este escenario se aprovecha para decirnos porque estamos embarcando en esta aventura. Tiny habla por la radio
-            con alguien sobre su último problema. Cuando su abuelo murió, le dejó sus más que usados calzones como herencia.
-            Si, estoy hablando de su apestosa ropa interior. De alguna forma, no quiero saber como, Tiny hizó de ellos su
-            más valioso y adorado tesoro, pero algo horrible ocurrió. ¡Fueron robados por Big! Nuestro deber es ayudar a
-            Tiny a recuperar lo que su adorable abuelo le dejó en su lecho de muerte. A lo mejor esos calzoncillos no son
-            meros calzoncillos.
+            Empezamos nuestra misión en un "simulador" que hace las veces de tutorial. Y así es como las mecánicas jugables del juego
+            nos son introducidas. Estas mecanicas resultan tan divertidas como extrañas. Portamos una pistola láser que corta
+            a través de TODO. Esto nos permite cortar diferentes objetos para usarlos como escaleras o puentes y movernos
+            por varios obstaculos. También tenemos un gancho y un rocket thruster. El gancho sirve para tirar de piezas o
+            lo que sea que cortemos, mientras que el rocket thruster las lanza hacia adelante. Gracias a estas herramientras,
+            podemos tener acceso a areas ilimitadas y escalar donde queramos. Aun así, tenemos que usar nuestro cerebro para
+            avanzar en los puzles que encontramos en el entorno.
+          </p>
+          <img class="imagen-opinion" src="img/rocket-img2.jpg" alt="Rocket League">
+          <p>
+            El juego consiste de seis niveles diferentes que nos llevan por diferentes paisajes y escenarios, siendo el siguiente un
+            poco más difícil que el anterior. Encontramos muchas barreras que podemos traspasar si hacemos un uso apropiado
+            de las herramientas proporcionadas. Por ejemplo, podemos cortar una montaña o un pilar, tirarlo al suelo, empujarlo
+            al borde de un barranco y hacerlo funcionar como un puente. Varios objetivos diferentes pueden ser completados
+            durante el curso de nuestra aventura, tales como encontrar piedras, habitaciones secretas o coleccionar hasta
+            18 cintas de música que están ocultas en los mapas, algo que merece la pena mencionar.
           </p>
         </section>
+
         <section>
-          <h1 class="titulo-apartado">Mi opinión</h1>
+          <h1 class="titulo-apartado">La música es una maravilla</h1>
           <p>
-            Tiny and Big! ¡Qué locura de juego! Cuando empezamos a jugarlo, rápidamente encontramos unos gráficos cartoon muy agradables
-            y coloridos (típicos de comics dibujados a mano) mostrándonos a Tiny conduciendo un coche a traves del desierto.
-            Este escenario se aprovecha para decirnos porque estamos embarcando en esta aventura. Tiny habla por la radio
-            con alguien sobre su último problema. Cuando su abuelo murió, le dejó sus más que usados calzones como herencia.
-            Si, estoy hablando de su apestosa ropa interior. De alguna forma, no quiero saber como, Tiny hizó de ellos su
-            más valioso y adorado tesoro, pero algo horrible ocurrió. ¡Fueron robados por Big! Nuestro deber es ayudar a
-            Tiny a recuperar lo que su adorable abuelo le dejó en su lecho de muerte. A lo mejor esos calzoncillos no son
-            meros calzoncillos.
+            La música en este juego es magnífica y diversa, pasando desde blues hasta rock y rap. Cuando digo que la banda sonora es
+            magnífica, lo digo en serio. Soy un amante/adicto de la música y se de lo que estoy hablando. Este juego no sería
+            tan bueno si su música no fuera genial. Dejaré debajo algunos de mis temas favoritos.
           </p>
+          <div class="media">
+          <iframe src="https://www.youtube.com/embed/P74pKhjMpq4?ecver=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        </section>
+        <section>
+          <h1 class="titulo-apartado">La duración...</h1>
+          <p>
+            Tristemente, el juego no dura demasiado. Se pasa fácilmente en menos de 3 horas de juego, pero es altamente rejugable debido
+            a la cantidad de logros desbloqueables que ofrece. De todas formas, resulta una experiencia muy disfrutable,
+            llena de bromas y situaciones inesperadas que pueden hacerte soltar más de una carcajada.
+          </p>
+        </section>
+        <section class="mi-opinion">
+          <h1 class="titulo-apartado">Mi opinión</h1>
+          <div class="texto-mi-opinion">
+            <p>
+              Definitivamente recomiendo probar este juego. Es diferente, fresco y puede hacerte pasar un buen rato.
+            </p>
+            <p>
+              No es ninguna obra maestra ni un juego que recordarás con cariño, pero al jugarlo puedes ver el cariño con el que lo han
+              hecho sus desarrolladores y valorar su originalidad. Su punto fuerte para mí es, sin duda, su banda sonora.
+              Recomiendo echarle un ojo, es muy disfrutable.
+            </p>
+          </div>
         </section>
       </section>
     </article>
@@ -188,6 +246,7 @@
   <script src="js/menu.js"></script>
   <script src="js/fichas.js"></script>
   <script src="js/ficha.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

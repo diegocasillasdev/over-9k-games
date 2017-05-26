@@ -32,41 +32,59 @@
   <!-- Ficha -->
   <div id="ficha" class="ficha">
     <div class="fondo-ficha">
-      <!-- Título -->
+
+      <!-- Cabecera -->
       <header class="titulo-ficha">
         <div>
           <h3></h3>
           <span class="iconos-plataformas"></span>
         </div>
       </header>
+      <!-- Fin cabecera -->
+
       <!-- Contenido -->
       <div class="contenido-ficha">
+        <div class="contenedor-relativo">
+          <div class="contenedor-ampliable">
+            <span class="cerrar-imagen">X</span>
+          </div>
+        </div>
         <!-- Columna izquierda -->
         <div class="contenido-ficha-izq">
           <img class="portada-ficha" src="">
           <input type="button" id="boton-cerrar" class="boton-ficha cerrar" value="cerrar">
         </div>
+        <!-- Fin columna izquierda -->
+
         <!-- Columna derecha -->
         <div class="contenido-ficha-dcha">
           <div class="datos-ficha">
-            <div class="dato">
-              <span>Desarrollador: </span>
-              <span id="desarrollador"></span>
+            <div class="arriba-izquierda">
+              <div class="dato">
+                <span>Desarrollador: </span>
+                <span id="desarrollador"></span>
+              </div>
+              <div class="dato">
+                <span>Genero: </span>
+                <span id="genero"></span>
+              </div>
+              <div class="dato">
+                <span>Precio: </span>
+                <span id="precio"></span>
+              </div>
+              <div class="dato">
+                <span>Fecha de lanzamiento: </span>
+                <span id="fecha-lanzamiento"></span>
+              </div>
             </div>
-            <div class="dato">
-              <span>Genero: </span>
-              <span id="genero"></span>
-            </div>
-            <div class="dato">
-              <span>Precio: </span>
-              <span id="precio"></span>
-            </div>
-            <div class="dato">
-              <span>Fecha de lanzamiento: </span>
-              <span id="fecha-lanzamiento"></span>
-            </div>
-            <img class="pegi">
+            <div class="arriba-derecha">
+              <div class="nota">
+                <div class="texto-nota">Nota</div>
+                <div id="puntuacion" class="puntuacion">6</div>
+              </div>
+              <img class="pegi">
 
+            </div>
             <hr class="divisor-ficha">
 
             <div id="descripcion" class="descripcion">
@@ -78,41 +96,51 @@
             </div>
           </div>
         </div>
+        <!-- Fin columna derecha -->
       </div>
     </div>
   </div>
+  <!-- Fin ficha -->
 
   <main>
+
+    <!-- Cabecera -->
     <header class="cabecera">
       <div class="titulo-principal">
         <h1>Over 9k Games!</h1>
         <div class="subtitulo">Opiniones desenfadadas</div>
       </div>
+
+      <!-- Menu -->
       <nav class="menu">
         <ul clasS="menu-principal">
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="#">+ info</a>
+          <li><a>+ info</a>
             <ul class="submenu">
-              <li><a href="#">hola</a></li>
-              <li><a href="#">q ase</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
             </ul>
           </li>
-          <li><a href="#">Opiniones</a>
+          <li><a>Opiniones</a>
             <ul class="submenu">
-              <li><a href="#">Indies</a></li>
-              <li><a href="#">Comerciales</a></li>
+              <li><a href="opiniones.html">Opiniones</a></li>
+              <li><a href="noticias.html">Noticias</a></li>
             </ul>
           </li>
         </ul>
-        <input list="juegos" class="buscador" placeholder="Buscar...">
-        <datalist id="juegos">
-          <option value="Tiny and Big">
-            <option value="Rocket League">
-              <option value="Doom">
+
+        <!-- Buscador -->
+        <input list="juegos-buscador" class="buscador" placeholder="Buscar...">
+        <datalist id="juegos-buscador">
         </datalist>
+        <!-- Fin buscador -->
       </nav>
+      <!-- Fin menu -->
     </header>
+    <!-- Fin cabecera -->
+
     <hr>
+
     <article class="opinion">
       <section>
         <h1 class="titulo-opinion">Doom</h1>
@@ -122,22 +150,9 @@
         <input type="button" id="doom" class="boton-ficha abrir" value="ver ficha">
 
         <p>
-          Tiny and Big: Grandpa’s Leftovers es un juego indie desarrollado por Black Pants. Ser un juego indie significa que ha sido
-          hecho por un estudio de videojuegos independiente, normalmente formado por pocas personas o incluso un único individuo.
-          Estos peculiares estudios o individuos no reciben financiación de distribuidoras más grandes, asi que lanzan sus
-          juegos digitalmente gracias a plataformas como Steam, PlayStation Network o Xbox Live. Generalmente, los juegos
-          indie son "más pequeños" que los juegos convencionales, pero también son más innovadores. A menudo no presentan
-          gráficos a la última debido a la falta de financiación externa, asi que apuestan por la experimentación creativa
-          y artística, siendo una jugabilidad divertida uno de sus puntos fuertes.
-        </p>
-        <p>
-          La mayoría de los juegos de los que os traeré opiniones serán, sin duda, juegos indie. Estos últimos años me he encontrado
-          disfrutando estos juegos mucho más que juegos "comerciales". Por lo tanto, me he convertido en un gran fan de ellos.
-          Llámadme hipster.
-        </p>
-        <p>
-          Si, me he dado cuenta de que estoy mareando mucho la perdíz... pero supongo que era una buena idea aclarar brevemente qué
-          son los juegos indie.
+          Hemos vuelto del infierno tras horas y horas de acabar con demonios a base de cartucho de recortada. Una experiencia tan
+          rítmica, rápida y visceral que todavía estamos alterados. Porque DOOM no deja indiferente, con una campaña poderosa
+          y otros aspectos algo menos logrados. Lo ponemos todo en una balanza y te contamos el resultado en este análisis.
         </p>
 
         <div class="media">
@@ -145,43 +160,70 @@
         </div>
 
         <section>
-          <h1 class="titulo-apartado">Mi opinión</h1>
+          <h1 class="titulo-apartado">Introducción</h1>
           <p>
-            Tiny and Big! ¡Qué locura de juego! Cuando empezamos a jugarlo, rápidamente encontramos unos gráficos cartoon muy agradables
-            y coloridos (típicos de comics dibujados a mano) mostrándonos a Tiny conduciendo un coche a traves del desierto.
-            Este escenario se aprovecha para decirnos porque estamos embarcando en esta aventura. Tiny habla por la radio
-            con alguien sobre su último problema. Cuando su abuelo murió, le dejó sus más que usados calzones como herencia.
-            Si, estoy hablando de su apestosa ropa interior. De alguna forma, no quiero saber como, Tiny hizó de ellos su
-            más valioso y adorado tesoro, pero algo horrible ocurrió. ¡Fueron robados por Big! Nuestro deber es ayudar a
-            Tiny a recuperar lo que su adorable abuelo le dejó en su lecho de muerte. A lo mejor esos calzoncillos no son
-            meros calzoncillos.
+            Nada más empezar la campaña, uno de los personajes de este nuevo DOOM se pone en contacto con nosotros mediante un monitor,
+            comentando que "podríamos beneficiarnos mutuamente". Nuestro Marine responde rompiendo el monitor de un puñetazo.
+            Al principio, interpretamos esto como una declaración de intenciones. Nada de intentar hacer una historia alrededor
+            de demonios en Marte que intente tener sentido. Nada que nos haga dar paseos durante una hora antes de empezar
+            a pegar tiros. Pero lo cierto es que con el avance de las misiones, DOOM sí intenta contar algo parecido a una
+            historia. No le pone mucho empeño y nunca te la tomarás en serio, pero por mucha inspiración en el shooter clásico,
+            parece que no se pueden evitar ciertas concesiones a la época en la que nos encontramos.
           </p>
         </section>
         <section>
-          <h1 class="titulo-apartado">Mi opinión</h1>
+          <h1 class="titulo-apartado">¿Pero esto de qué va?</h1>
           <p>
-            Tiny and Big! ¡Qué locura de juego! Cuando empezamos a jugarlo, rápidamente encontramos unos gráficos cartoon muy agradables
-            y coloridos (típicos de comics dibujados a mano) mostrándonos a Tiny conduciendo un coche a traves del desierto.
-            Este escenario se aprovecha para decirnos porque estamos embarcando en esta aventura. Tiny habla por la radio
-            con alguien sobre su último problema. Cuando su abuelo murió, le dejó sus más que usados calzones como herencia.
-            Si, estoy hablando de su apestosa ropa interior. De alguna forma, no quiero saber como, Tiny hizó de ellos su
-            más valioso y adorado tesoro, pero algo horrible ocurrió. ¡Fueron robados por Big! Nuestro deber es ayudar a
-            Tiny a recuperar lo que su adorable abuelo le dejó en su lecho de muerte. A lo mejor esos calzoncillos no son
-            meros calzoncillos.
+            Da igual. Pocas cosas pueden hacer que no disfrutes la campaña de DOOM, uno de los modos en solitario más divertidos y adictivos
+            de un FPS que hemos jugado en años. Incluso existe un comando a introducir en la consola para hacer saltar todas
+            estas secuencias narrativas e ir directamente a la acción, una vez termina la carga. Porque aquí se viene a disparar,
+            y las sensaciones que se consiguen haciéndolo en la nueva obra de id software a la hora de despachar demonios
+            pocas veces las hemos vivido fuera del mundo online y sus posibilidades. La sensación de disparar cada una de
+            sus armas, en especial la mítica Super Shotgun es tal que no nos cabe duda que nuestro ratón haya sufrido estos
+            últimos días a base de poderosos y emocionados clicks.
+          </p>
+          <img class="imagen-opinion" src="img/doom-img1.jpg" alt="Doom">
+          <p>
+            El juego consiste de seis niveles diferentes que nos llevan por diferentes paisajes y escenarios, siendo el siguiente un
+            poco más difícil que el anterior. Encontramos muchas barreras que podemos traspasar si hacemos un uso apropiado
+            de las herramientas proporcionadas. Por ejemplo, podemos cortar una montaña o un pilar, tirarlo al suelo, empujarlo
+            al borde de un barranco y hacerlo funcionar como un puente. Varios objetivos diferentes pueden ser completados
+            durante el curso de nuestra aventura, tales como encontrar piedras, habitaciones secretas o coleccionar hasta
+            18 cintas de música que están ocultas en los mapas, algo que merece la pena mencionar.
           </p>
         </section>
+
         <section>
-          <h1 class="titulo-apartado">Mi opinión</h1>
+          <h1 class="titulo-apartado">La música es una maravilla</h1>
           <p>
-            Tiny and Big! ¡Qué locura de juego! Cuando empezamos a jugarlo, rápidamente encontramos unos gráficos cartoon muy agradables
-            y coloridos (típicos de comics dibujados a mano) mostrándonos a Tiny conduciendo un coche a traves del desierto.
-            Este escenario se aprovecha para decirnos porque estamos embarcando en esta aventura. Tiny habla por la radio
-            con alguien sobre su último problema. Cuando su abuelo murió, le dejó sus más que usados calzones como herencia.
-            Si, estoy hablando de su apestosa ropa interior. De alguna forma, no quiero saber como, Tiny hizó de ellos su
-            más valioso y adorado tesoro, pero algo horrible ocurrió. ¡Fueron robados por Big! Nuestro deber es ayudar a
-            Tiny a recuperar lo que su adorable abuelo le dejó en su lecho de muerte. A lo mejor esos calzoncillos no son
-            meros calzoncillos.
+            La música en este juego es magnífica y diversa, pasando desde blues hasta rock y rap. Cuando digo que la banda sonora es
+            magnífica, lo digo en serio. Soy un amante/adicto de la música y se de lo que estoy hablando. Este juego no sería
+            tan bueno si su música no fuera genial. Dejaré debajo algunos de mis temas favoritos.
           </p>
+          <div class="media">
+            <iframe src="https://www.youtube.com/embed/LhIS4FdS7co?ecver=1" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+        </section>
+        <section>
+          <h1 class="titulo-apartado">La duración...</h1>
+          <p>
+            Tristemente, el juego no dura demasiado. Se pasa fácilmente en menos de 3 horas de juego, pero es altamente rejugable debido
+            a la cantidad de logros desbloqueables que ofrece. De todas formas, resulta una experiencia muy disfrutable,
+            llena de bromas y situaciones inesperadas que pueden hacerte soltar más de una carcajada.
+          </p>
+        </section>
+        <section class="mi-opinion">
+          <h1 class="titulo-apartado">Mi opinión</h1>
+          <div class="texto-mi-opinion">
+            <p>
+              DOOM es diversión rápida, directa, frenética. Hacía tiempo que no nos enfrentábamos a una campaña de un shooter tan veloz
+              y lleno de ritmo. Es su parte principal y es la más lograda. El multjugador es poco inspirado, al intentar
+              una mezcolanza de lo nuevo y lo viejo, mientras que el Snapmap es un editor lleno de posibilidades aún por
+              explotar. Pero si buscas un shooter puro, con alma, la campaña de DOOM cumple de sobras, mientras muestra y
+              demuestra cómo de optimizados deberían estar los videojuegos presentes en su lanzamiento.
+            </p>
+          </div>
         </section>
       </section>
     </article>
@@ -189,6 +231,7 @@
   <script src="js/menu.js"></script>
   <script src="js/fichas.js"></script>
   <script src="js/ficha.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -23,20 +23,12 @@ body {
     /* Ajustes para fondo gif */
     background-repeat: no-repeat;
     background-size: cover;
-/* quitar 
-    position: absolute;
-  left: 0;
-  right: 0;
-  */
 }
 
 hr {
     width: 80%;
     margin: 0 auto;
 }
-
-
-
 
 
 
@@ -169,14 +161,6 @@ section {
     z-index: 0;
 }
 
-/* pone SOLO el primer nivel horizontal 
-.menu-principal > li {
-
-    float: left;
-}
-
-*/
-
 .submenu {
     width: 10em;
     display: none;
@@ -203,24 +187,6 @@ section {
 .submenu a:hover {
     border-bottom: solid 1px white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
