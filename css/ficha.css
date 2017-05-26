@@ -245,11 +245,13 @@
     font-weight: bold;
     font-size: 2em;
     font-family: 'orbitron';
-    color: lightgrey;
+    color: #EEEEEE;
+    text-shadow: 0 0 10px black;
 }
 
 .contenedor-ampliable span:hover {
     color: white;
+    text-shadow: 0 0 20px black;
 }
 
 .ampliable {
