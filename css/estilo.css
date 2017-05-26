@@ -73,7 +73,6 @@ h2 span {
 
 
 main {
-    padding: 40px 0;
     width: 70%;
     height: 100%;
     margin: 0 auto;
@@ -84,6 +83,7 @@ main {
 }
 
 .centrar-todo {
+    padding: 80px;
     left: 0;
     right: 0;
     width: 100%;
@@ -249,7 +249,7 @@ section {
 .portada {
     width: 80%;
     margin: 0 auto;
-    padding: 40px;
+    padding: 40px 0;
 }
 
 
